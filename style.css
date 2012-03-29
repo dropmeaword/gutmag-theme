@@ -1,0 +1,923 @@
+/*
+Theme Name: GUTMAG Theme
+Theme URI: http://www.gutmag.eu/
+Description: Designed specifically for GUTMAG
+Version: 0.9b
+Author: Michiel Hilbrink & Luis Fernandez
+Author URI: http://www.beeldschap.nl/
+Tags: magazine
+License: GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl.html
+.
+NOTE: Modifying CSS
+1. Use the included sample child theme
+2. rules commented out and wrapped in parentheses i.e.
+($WPFolio_body_font)
+are handled by the header.php file and editable in
+Current Theme Options in the Wordpress dashboard. They
+can be overridden by the child theme.
+*/
+
+.highlight {
+	border: 1px solid #000; padding: 0 0.3em 0 0.3em;
+}
+
+/* @lfernandez: begin double column content */
+#teamList {
+margin-top: 2.5em;
+}
+
+.gridblock {
+width: 240px;
+float: left;
+margin: 0 36px 32px 0;
+}
+
+div.gridblock h4 {
+margin: 0;
+padding: 0;
+font-size: 0.90em;
+font-weight: bold;
+}
+
+div.gridblock p {
+margin: 12px 0 0 0;
+padding: 0;
+font-size: 0.85em !important;
+}
+
+p.subtext {
+color: grey;
+font-style: italic !important;
+margin: 0 !important;
+padding: 0 !important;
+}
+/* @lfernandez: end double column content */
+
+/* @lfernandez: menu start */
+ul.menu  li:before {
+	content: "→ "; /* &#8594; */
+}
+/* @lfernandez: menu end */
+
+/* BEGIN user editable area */
+body{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	margin: 0;
+}
+.container{
+	width: 877.5px;
+	height: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0;
+	padding-top: 15em;
+}
+
+/* @group header */
+
+.headercontainer{
+	width: 877.5px;
+    margin: 0 auto;
+    margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0;
+}
+
+.header{
+	width: 575px;
+	padding-top: 12em;
+	float: left;
+}
+
+.logo
+ {
+	height: 63px;
+	width: 240px;
+	float: left;
+	padding-left: 30px;
+	padding-top: 5em;
+
+}
+
+/* @end */
+
+/* @group bodyborder */
+
+#top, #bottom, #left, #right {
+	
+	position: fixed;
+	background: url(images/raster.png) repeat;
+	z-index: 999;
+}
+	#left {
+	top: 23px; bottom: 23px;
+	width: 23px;
+}
+	#right {
+	top: 23px; bottom: 23px;
+	width: 23px;
+}
+#left { left: 0; }
+#right { right: 0; }
+
+	#top, #bottom {
+		left: 0; right: 0;
+		height: 23px;
+		}
+		#top { top: 0; }
+		#bottom { bottom: 0; }
+
+<!--[if lte IE 6]>
+	<style>#top, #bottom, #left, #right { display: none; }</style>
+<![endif]-->
+
+@media 
+
+/* Fairly small screens including iphones */
+only screen and (max-width: 500px),
+
+/* iPads */
+only screen and (min-device-width: 768px) and (max-device-width: 1024px) 
+
+{
+	#top, #bottom, #left, #right { display: none; }
+}
+
+
+/* @end */
+
+.agendaArea {
+	margin-top: -1.9em;
+	margin-bottom: -1.1em;
+}
+
+.sidebarHeader {
+	font: 1.9em "MagnusEFRegular";
+	margin-bottom: 0;
+}
+
+.articlesAuthorArea {
+	margin-top: 0;
+}
+.articlesAuthorArea dt {
+	padding-bottom: 0.2em;
+}
+
+/* @group content */
+
+.title-area {
+	float: left;
+	width: 197px;
+	margin-right: 30px;
+	margin-top: -0.25em;
+	margin-left: 0px;
+}
+
+.title-area-img {
+	margin-left: 0px;
+	position: absolute;
+	top: 12px;
+	left: 0px;
+	width: 197px;
+	/* background: white url('images/raster.png') repeat-x; */
+	background-color: white;
+	padding: 5px 30px 16px 0px;
+	margin-top: -0.25em;
+}
+
+.title-area-img a {
+}
+
+.title-area-page, .title-area-page a {
+	width: 197px;
+	margin: -0.3em 30px 1em 0px;
+}
+
+.title-area ul {
+	list-style: none;
+	margin-top: -11px;
+	padding: 0;
+	margin-bottom: 0;
+}
+
+.title-area ul li {
+	display: inline;
+}
+
+h2.post-title {
+	font: normal 30px/1.1em MagnusEFRegular;
+	text-transform: uppercase;
+	color: black;
+}
+
+h2 a {
+	text-transform: uppercase;
+	color: black;
+	text-decoration: underline;
+	font: normal 30px/1.1em MagnusEFRegular;
+}
+
+#content{	
+	font-weight: normal;
+	text-align: left;
+	width: 575px;
+	float: left;
+	top: 0;
+}
+
+#content p{
+	margin:  0 0 2.0em 0;
+	padding:  0;
+	font: 1.0em/1.35em "AkzidenzGroteskBQLightRegular";
+}
+#content h3 {
+	font: 1em/1.25em "AkzidenzGroteskBQMedium";
+	padding: 0;
+	margin:  1.85em 0 .45em 0;
+}
+
+.eventArea {
+	width: 272.5px;
+	float: left;
+	position: absolute;
+}
+.emptyArea {
+	width: 30px;
+	height: 30px;
+	float: left;
+	position: absolute;
+}
+
+
+/* @end */
+
+/* @group search */
+
+input#searchsubmit{
+	border-style: none;
+	width: 48px;
+	font: 0.8em "AkzidenzGroteskBQRegular";
+	background-color: transparent;
+	margin-left: -5px;
+}
+
+.search {
+	padding-top: 0.7em;
+	list-style-type: none;
+}
+
+input#s{
+	border-style: none;
+	width: 19.8em;
+}
+/*
+input:-webkit-input-placeholder
+{
+	color:black;
+}
+
+input:-moz-placeholder {
+	
+	color: black;
+}*/
+ 
+input::-webkit-input-placeholder, isindex::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+color: black;
+}
+
+
+
+/* @end */
+
+/* @group sidebar */
+
+.issues {
+	margin: 2.5em 0 0 0;
+}
+
+.footerSidebar {
+	font: 0.75em/0.8em 		
+	AkzidenzGroteskBQRegular;
+	list-style-type: none;
+}
+
+.issuesSidebar {
+	
+}
+
+.containsIsseus {
+	margin-top: 0.6em;
+}
+.containsArticles dt{
+}
+.containsEvents {
+	margin-top: 0.6em;
+}
+.sidebargrey {
+	opacity: 0.2; !important
+}
+
+#sidebar{
+	/* color: ($WPFolio_highlight_color)*/
+	width: 270px;
+	float: left;
+	padding-left: 30px;
+}
+#sidebar h2.widgettitle{
+	padding: 0;
+	margin-bottom: .5em;
+	font-weight: normal;
+}
+
+#sidebar ul{
+	list-style: none;
+	padding-left: 0;
+	margin-top: -0.9em;
+}
+#sidebar ul li{
+	margin-bottom: .5em;
+}
+#sidebar a{
+	color: black;
+}
+#sidebar a:hover{
+	text-decoration: none;
+}
+#sidebar form{
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+#sidebar #searchform div label.screen-reader-text{
+	display: none;
+}
+#sidebar .widget_calendar table#wp-calendar{
+	margin-right: auto;
+	margin-left: auto;
+	width: 240px;
+	text-align: center;
+}
+
+#searchform {
+	width: 270px;
+}
+
+.rightPaneMenu  {
+	font: 0.75em/0.8em 		
+	AkzidenzGroteskBQRegular;
+
+}
+
+
+/* @end */
+
+/* @group information - styles */
+
+.city {
+	font: 0.75em/0.8em AkzidenzGroteskBQRegular;
+	margin-top: 0.3em;
+	margin-bottom: 0;
+}
+
+.sidebarLine {
+	width: 32px;
+	border-bottom: 1px solid black;
+	padding: 0;
+	margin: -1px 0 0;
+}
+
+.issueNumber {
+	font: 0.8em AkzidenzGroteskBQRegular;
+	margin: 3px 0;
+	padding: 0;
+}
+
+.issueTitle {
+	background-color: black;
+	font: 0.8em/1.2em "AkzidenzGroteskBQLightRegular";
+	color: white;
+	display: inline-block;
+	padding: 1px 4px 2px 3px;
+	margin-bottom: 0.3em;
+}
+
+.articleTitle {
+	text-transform: uppercase;	
+	font: 0.8em/1.3em "AkzidenzGroteskBQMedium";
+}
+
+.articleAuthor {
+	font: italic 0.7em/1.3em AkzidenzGroteskBQRegular;
+}
+
+.author {
+	font: italic 0.7em/1.3em AkzidenzGroteskBQRegular;
+}
+
+.agendaDate {
+	font: 0.8em/1.1em "AkzidenzGroteskBQLightRegular";
+	padding-top: 0.2em;
+}
+
+.agendaTitle {
+	text-transform: uppercase;	
+	font: 0.8em/1.1em "AkzidenzGroteskBQBold";
+}
+
+.agendaVenue {
+	font: 0.75em/1.1em HelveticaLTStdCondensed;
+	padding-bottom: 0.3em;
+	padding-top: 0.1em;
+}
+
+.agendaListing {
+	font: 0.75em/0.8em AkzidenzGroteskBQRegular;
+	padding-bottom: 0.1em;
+}
+
+.agendaExc {
+	font: italic 0.7em/1.1em AkzidenzGroteskBQRegular;
+	padding-bottom: 1em;	
+	padding-top: 0.2em;
+
+}
+
+div.itemsocial ul li{
+	display: inline;
+}
+div.itemsocial {
+	padding-top: 1em;
+	padding-bottom: 0;
+}
+
+
+/* @end */
+
+/* @group htags */
+h1,h2,h3,h4,h5,h6,fieldset{
+	font-weight: normal;
+	font-style: normal;
+}
+h1{ /*font-size: ($WPFolio_headline_size)*/ }
+h1,h2,h3 { /*color: (WPFolio_highlight_color)*/ }
+h2 {
+	margin: 0;
+	padding: 0;
+}
+h3 {
+	font-size: 1.4em;
+}
+h4{
+	/*color: ($WPFolio_second_color)*/
+	font-size: 1.2em;
+}
+h5{
+	font-size: 1em;
+}
+/* @end */
+
+/* @group links */
+a {
+	color: black;
+}
+
+/* @end */
+
+/* @group gallery */
+
+.gallery_counter {
+	font:  0.7em/1.1em AkzidenzGroteskBQRegular;
+	padding-left: 0.3em;
+	padding-top: 0.3em;
+	width: 197px;
+	position: absolute;
+	color: white;
+}
+
+.gallery_description {
+	color: white;
+	font:  0.7em/1.1em AkzidenzGroteskBQRegular;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+	padding-left: 226px;
+	background-color: black;
+}
+
+.gallery_top {
+	padding-bottom: 2em;
+	position: relative;
+}
+
+
+.gallery{
+	margin: auto;
+}
+.gallery-item{
+	float: left;
+	margin-top: 10px;
+	text-align: center;
+	width: 33%;
+}
+.gallery-caption{
+	margin-left: 0;
+}
+/* @end */
+
+/* @group fonts */
+
+@font-face {
+    font-family: 'AkzidenzGroteskBQMedium';
+    src: url('fonts/akzidenzgrotesk-medium-webfont.eot');
+    src: url('fonts/akzidenzgrotesk-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/akzidenzgrotesk-medium-webfont.woff') format('woff'),
+         url('fonts/akzidenzgrotesk-medium-webfont.ttf') format('truetype'),
+         url('fonts/akzidenzgrotesk-medium-webfont.svg#AkzidenzGroteskBQMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'AkzidenzGroteskBQBold';
+    src: url('fonts/akzidenzgrotesk-bold-webfont.eot');
+    src: url('fonts/akzidenzgrotesk-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/akzidenzgrotesk-bold-webfont.woff') format('woff'),
+         url('fonts/akzidenzgrotesk-bold-webfont.ttf') format('truetype'),
+         url('fonts/akzidenzgrotesk-bold-webfont.svg#AkzidenzGroteskBQBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'HelveticaLTStdCondensed';
+    src: url('fonts/helveticaltstd-cond-webfont.eot');
+    src: url('fonts/helveticaltstd-cond-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helveticaltstd-cond-webfont.woff') format('woff'),
+         url('fonts/helveticaltstd-cond-webfont.ttf') format('truetype'),
+         url('fonts/helveticaltstd-cond-webfont.svg#HelveticaLTStdCondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'HelveticaNeueLTStd75Bold';
+    src: url('fonts/helveticaneueltstd-bd-webfont.eot');
+    src: url('fonts/helveticaneueltstd-bd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helveticaneueltstd-bd-webfont.woff') format('woff'),
+         url('fonts/helveticaneueltstd-bd-webfont.ttf') format('truetype'),
+         url('fonts/helveticaneueltstd-bd-webfont.svg#HelveticaNeueLTStd75Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'AkzidenzGroteskBQLightRegular';
+    src: url('fonts/akzidenzgrotesk-light-webfont.eot');
+    src: url('fonts/akzidenzgrotesk-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/akzidenzgrotesk-light-webfont.woff') format('woff'),
+         url('fonts/akzidenzgrotesk-light-webfont.ttf') format('truetype'),
+         url('fonts/akzidenzgrotesk-light-webfont.svg#AkzidenzGroteskBQLightRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'AkzidenzGroteskBQRegular';
+    src: url('fonts/akzidenzgrotesk-regular-webfont.eot');
+    src: url('fonts/akzidenzgrotesk-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/akzidenzgrotesk-regular-webfont.woff') format('woff'),
+         url('fonts/akzidenzgrotesk-regular-webfont.ttf') format('truetype'),
+         url('fonts/akzidenzgrotesk-regular-webfont.svg#AkzidenzGroteskBQRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'MagnusEFRegular';
+    src: url('fonts/magnusef-webfont.eot');
+    src: url('fonts/magnusef-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/magnusef-webfont.woff') format('woff'),
+         url('fonts/magnusef-webfont.ttf') format('truetype'),
+         url('fonts/magnusef-webfont.svg#') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* @end */
+
+.line {
+	width: 32px;
+	padding: 0;
+	border-bottom: 1px solid black;
+	margin: 0 0 4px;
+}
+
+.back {
+	font: 0.8em AkzidenzGroteskBQRegular;
+}
+
+.commentSidebar {
+	font: italic 0.7em AkzidenzGroteskBQRegular;
+}
+
+form {
+	margin: 0;
+	padding: 0;
+}
+.info{
+	margin: 0px 10px 5px;
+	padding: 5px;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: justify;
+}
+blockquote{
+	margin: 0;
+	padding: 1em 4em;
+	line-height: 1.5em;
+	font-style: italic;
+}
+.widemargins{
+	margin: auto 135px;
+}
+.widemargins-override{
+margin: auto -135px;
+}
+.clear-both{
+	clear: both;
+}
+
+.Page.not.found p{
+	font-size: 1.5em;
+}
+
+code{
+	color: gray;
+	font-family: "Courier New", Courier, mono;
+}
+
+.space {
+	padding-bottom: 2em;
+}
+
+.justify{
+text-align: justify;
+}
+
+.post-bottom-title{
+	margin: 5px 30px 0px;
+	text-align: center;
+	font-size: 11px;
+	clear: both;
+}
+
+p.link_pages {
+	clear: both;
+}
+
+/* @group images */
+img {border:none;
+}
+.entry img{margin: 0;
+	padding:  0;}
+.entry img.alignleft {
+	padding: .5em 1em .5em 0;}
+.entry img.alignright {
+	padding: .5em 0 .5em 1px;	
+}
+img.size-large, img.aligncenter {
+	margin: 0;
+	padding: .5em 0;
+}
+.entrycat img{
+	margin: 3px 3px 3px 3px;
+	margin-bottom: 2px;
+}
+.wp-caption{
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding-top: 4px;
+	margin: 10px;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+.wp-caption img{
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+.img-frame{
+	width: 25%;
+	min-width: 220px;
+	height:225px;
+	float: left;
+	display: inline;
+	margin-top: 10px;
+}
+.img-container{
+	text-align:center;
+	margin-right:auto;
+	margin-left: auto;
+	display: inline-table;
+}
+.img-frame-caption{
+	width:60%;
+	margin-left:auto;
+	margin-right:auto;
+}
+.img-frame-caption a{
+	font-weight: normal;
+	font-style: normal;
+	padding: 0;
+}
+.page p img{
+	padding: 0;
+	border-style: none;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.alignright,img.alignright{
+	float:right;
+	margin: 0 0 0 1em;
+}
+.alignleft,img.alignleft{
+	float:left;
+	margin: 0 1em 0 0;
+}
+.aligncenter, img.aligncenter{
+	display:block;
+	text-align:center;
+	margin: 1em auto;/*this might need to be removed*/
+}
+.entry .alignnone{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.wp-caption-text{
+	margin: 5px;
+	padding: 5px 0 0;
+	font-size: 1em;
+}
+
+div.archive-result img{
+	float: left;
+	margin-right: 2em;
+	margin-bottom: 1em;
+}
+
+img#wpstats{
+position: absolute;
+left: -999em;
+}
+/* @end */
+
+/* @group .entry styles */
+div.entry{
+	padding: 0px;
+	margin: 0px auto 20px;
+	overflow: hidden;
+}
+div.entry.notblog p{
+	text-align: left;
+}
+.entrycat{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+	font-size: 11px;
+	font-weight: normal;
+	line-height: 16px;
+	text-align: center;
+}
+.entrycat a{
+	text-align: center;
+	padding: 10px;
+	font-weight: bold;
+}
+/* @end */
+
+/* @group comments */
+#comments{
+	margin-top: 1em;
+}
+.comment-body{
+	border-bottom: 1px solid #E8E8E8;
+	text-align: justify;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+.bypostauthor, 
+.comment-author-admin{
+	background: #fdf9c4 repeat-x scroll;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border: 1px solid #eee;
+	border-bottom: none;
+}
+ol.commentlist ul{
+	list-style-type: none;
+}
+.required{
+	color: red;
+}
+p.form-allowed-tags {
+	font-size: smaller;
+	line-height: 1em;
+	clear: both;
+	width: 350px;
+	margin: 0 0 0 6.5em;
+}
+#commentform label{
+	position: relative;
+	float: left;
+	width: 60px;
+	text-align: right;
+}
+#commentform input, #commentform textarea{
+	margin-left: 7px;
+}
+/* @end */
+
+/* @group edit-link styles */
+.edit-link a:before{
+	content:"✎ ";
+	font-size: 1.3em;
+}
+.edit-link a.post-edit-link{
+	background-color: #FF0;
+	font-size: 12px;
+	font-weight: normal;
+	padding: .5em .8em 2px .5em;
+}
+/* @end */
+
+/* @group notable */
+
+.notable .alignnone{
+	/* alignnone defaults to center for artworks, but not for blog */
+}
+div.notable{
+	overflow: hidden;
+}
+div.notable-post{
+	padding: 0;
+	margin: 0 0 5em;
+}
+
+h4.notable-date a{
+	font-weight: normal;
+	font-style: normal;
+}
+.notable-post h2, .notable-post h3{
+	line-height: 1.8em;
+}
+.notable-post h3{
+	padding: 0px;
+	margin-top: 0px;
+	margin-bottom: .5em;
+}
+div.notable-post h3 a, link{
+	font-weight: normal;
+	font-style: normal;
+}
+div.notable-post h4{
+	margin-bottom: 1em;
+	font-weight: normal;
+	font-style: normal;
+}
+div.notable-post p{
+	margin-bottom: 1em;
+	margin-top: 0;
+}
+div.notable-post a{
+	/*color: ($WPFolio_second_color)*/
+}
+div.notable-post a:hover{
+	/*color: ($WPFolio_highlight_color)*/
+}
+
+.notable #searchform {
+	margin: 12px 0;
+}
+
+/* @end */
