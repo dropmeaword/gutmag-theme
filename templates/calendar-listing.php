@@ -5,18 +5,17 @@ $q =  get_query_current_calendar_NL();
 $calendarPosts = $wpdb->get_results($q, OBJECT);
 /* echo "query events: ".$q; */
 
-
-if( $calendarPosts ):
 ?>
+
 <section class="agendaArea">
-    <h1 class="sidebarHeader"><a href="templates/single-event.php")">Coming Up</a></h1>
-	<h5 class="city" style="margin: 1em 0 0 0;"><span class="highlight">AMSTERDAM</span> X LONDON</h5>
+    <h1 class="sidebarHeader">Coming Up</h1>
+		<!-- <h5 class="city"><span class="highlight">AMSTERDAM</span> X LONDON</h5> -->
+		<ul id="citySelector"><li class="highlight">AMSTERDAM</li><li>X</li><li>LONDON</li></ul>
 
     <div class="containsEvents" style="margin: 1em 0 1.85em 0;">
 		<!-- <div class="sidebarLine">&nbsp;</div> -->
-
-
-<?php
+<?
+if( $calendarPosts ):
 			global $post;
 			foreach ($calendarPosts as $post):
 				setup_postdata( $post );
@@ -39,12 +38,14 @@ if( $calendarPosts ):
 <?php 
 			endforeach; 
 			/*wp_reset_query(); */
+else:
 ?>
-    </div>
-</section>
-<?php 
+<p class="articleTitle">Sorry, it seems like we have no listings for your city at this moment.</p>
+<?
 endif;
 ?>
+	    </div>
+	</section>
 <!-- lf: end: list agenda event -->	<!-- lf end: this is the agenda section  -->
 
 <?php /* if (function_exists('debuginfo')) { debuginfo("Main"); } */  ?>

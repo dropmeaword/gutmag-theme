@@ -19,7 +19,7 @@ CoolClock.config = {
 	longTickDelay: 15000,
 	defaultRadius: 85,
 	renderRadius: 100,
-	defaultSkin: "chunkySwiss",
+	defaultSkin: "swissRail",
 	// Should be in skin probably...
 	// (TODO: allow skinning of digital display)
 	showSecs: true,
@@ -34,8 +34,8 @@ CoolClock.config = {
 			largeIndicator: { lineWidth: 4, startAt: 79, endAt: 92, color: "black", alpha: 1 },
 			hourHand: { lineWidth: 8, startAt: -15, endAt: 50, color: "black", alpha: 1 },
 			minuteHand: { lineWidth: 7, startAt: -15, endAt: 75, color: "black", alpha: 1 },
-			secondHand: { lineWidth: 1, startAt: -20, endAt: 85, color: "red", alpha: 1 },
-			secondDecoration: { lineWidth: 1, startAt: 70, radius: 4, fillColor: "red", color: "red", alpha: 1 }
+			secondHand: { lineWidth: 1, startAt: -20, endAt: 85, color: "black", alpha: 1 },
+			secondDecoration: { lineWidth: 1, startAt: 70, radius: 0, fillColor: "black", color: "black", alpha: 1 }
 		},
 		chunkySwiss: {
 			outerBorder: { lineWidth: 4, radius:97, color: "black", alpha: 1 },
