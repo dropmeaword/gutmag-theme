@@ -4,6 +4,7 @@ Template Name: Full Calendar Page
 */
 ?>
 <?php 
+/* @mh was here! */
 $g_show_backlink = 'calendar';
 get_header(); 
 ?>
