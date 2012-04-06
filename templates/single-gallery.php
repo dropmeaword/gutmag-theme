@@ -1,5 +1,5 @@
 <?php 
-$g_show_gallery_backlink = true;
+$g_show_backlink = 'gallery';
 get_header();
 ?> 
 

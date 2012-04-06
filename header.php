@@ -37,11 +37,23 @@
 <div class='headercontainer'>
 		<div class="header">
 		<?
-			global $g_show_gallery_backlink;
-			if( $g_show_gallery_backlink == true ):
+			global $g_show_backlink;
+			if( isset($g_show_backlink) ):
+				switch($g_show_backlink):
+					case 'gallery':
+						?>
+							<div class="here">GALLERY</div> 
+							<a href="<?php echo get_option('home'); ?>">&uarr; back</a>
+						<?
+						break;
+					case 'calendar':
+					?>
+							<div class="here">CALENDAR</div> 
+							<a href="<?php echo get_option('home'); ?>">&uarr; back</a>
+					<?
+						break;
+				endswitch;
 		?>
-			<div class="here">GALLERY</div> 
-			<a href="<?php echo get_option('home'); ?>">&uarr; back</a>
 	<? endif; ?>
 		</div> 
 

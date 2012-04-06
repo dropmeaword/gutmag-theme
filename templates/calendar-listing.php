@@ -8,7 +8,7 @@ $calendarPosts = $wpdb->get_results($q, OBJECT);
 ?>
 
 <section class="agendaArea">
-    <h1 class="sidebarHeader">Coming Up</h1>
+    <h1 class="sidebarHeader"><a href="/calendar">Coming Up</a></h1>
 		<!-- <h5 class="city"><span class="highlight">AMSTERDAM</span> X LONDON</h5> -->
 		<div id="citySelector">
 			<ul class="tabSelector"><li class="highlight">AMSTERDAM</li><li>X</li><li><a href="#">LONDON</a></li></ul>

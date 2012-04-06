@@ -289,17 +289,47 @@ h2 a {
 	margin:  1.85em 0 .45em 0;
 }
 
-.eventArea {
-	width: 272.5px;
-	float: left;
-	position: absolute;
+.eventAreaRow {
+	overflow: hidden;
+  width: 100%;
+    /*height: 250px; */
 }
+
+.eventArea {
+	width: 272px;
+	/*height: 410px;*/
+	padding-bottom: 0.8em;
+	margin: 0;
+	float: left;
+	position: relative;
+}
+
+.eventMeta {
+	width: 270px;
+	position: absolute;
+	top: 0;
+	/* @lfernandez @note maybe we do need some margins here? */
+}
+
+.eventArea a{
+	text-decoration: underline;
+}
+
+.eventArea a:hover{
+	text-decoration: none;
+}
+
 .emptyArea {
 	width: 30px;
 	height: 30px;
 	float: left;
-	position: absolute;
 }
+
+.ExcArea {
+	padding-top: 1em;
+	padding-bottom: 0.5em;
+}
+
 
 
 /* @end */
