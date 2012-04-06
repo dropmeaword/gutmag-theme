@@ -19,7 +19,8 @@
 	<?php if (function_exists('is_tag')) { if ( is_tag() ) { ?><?php bloginfo('name'); ?>&nbsp;&otimes;&nbsp;<?php  single_tag_title("Tag Archive:", true); } } ?>
 	</title>  
 
-<link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="<?= THEME_ROOT; ?>/css/coda-slider-2.0.css" type="text/css" media="screen" />
+	<link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" type="text/css" />
 
 <!-- calling wp_head -->
 <?php wp_head(); ?> 
@@ -34,11 +35,20 @@
 	<div id="bottom"></div>	
 
 <div class='headercontainer'>
-	<div class='header'></div> 
-		<div class="logo">
-			<a href="<?php echo get_option('home'); ?>"/><img src="<?php bloginfo('template_url'); ?>/images/gutmag_logo.png"/></a>
-			<div class='search'><?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('Right pane search') ) ; ?> </div>
-		</div>
+	<?
+		global $g_show_gallery_backlink;
+		if( $g_show_gallery_backlink == true ):
+	?>
+		<div class="header">
+			<div class="here">GALLERY</div> 
+			<a href="<?php echo get_option('home'); ?>">&uarr; back</a>
+		</div> 
+	<? endif; ?>
+
+	<div class="logo">
+		<a href="<?php echo get_option('home'); ?>"/><img src="<?php bloginfo('template_url'); ?>/images/gutmag_logo.png"/></a>
+		<div class='search'><?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('Right pane search') ) ; ?> </div>
+	</div>
 		
 </div>
 	

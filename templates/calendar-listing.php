@@ -10,8 +10,10 @@ $calendarPosts = $wpdb->get_results($q, OBJECT);
 <section class="agendaArea">
     <h1 class="sidebarHeader">Coming Up</h1>
 		<!-- <h5 class="city"><span class="highlight">AMSTERDAM</span> X LONDON</h5> -->
-		<ul id="citySelector"><li class="highlight">AMSTERDAM</li><li>X</li><li>LONDON</li></ul>
-
+		<div id="citySelector">
+			<ul class="tabSelector"><li class="highlight">AMSTERDAM</li><li>X</li><li><a href="#">LONDON</a></li></ul>
+		</div>
+		
     <div class="containsEvents" style="margin: 1em 0 1.85em 0;">
 		<!-- <div class="sidebarLine">&nbsp;</div> -->
 <?
@@ -40,7 +42,7 @@ if( $calendarPosts ):
 			/*wp_reset_query(); */
 else:
 ?>
-<p class="articleTitle">Sorry, it seems like we have no listings for your city at this moment.</p>
+<p>Sorry, it seems like we have no listings for your city at this moment.</p>
 <?
 endif;
 ?>

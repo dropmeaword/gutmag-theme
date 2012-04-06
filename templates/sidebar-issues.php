@@ -1,5 +1,5 @@
 <div class="issuesSidebar">
-	<h1 class="sidebarHeader"><a href="source">Issues</a></h1>
+	<h1 class="sidebarHeader">Issues</h1>
 	<dl class="containsIsseus">
 		
 		<dt class="issueTitle">01.01 Facing Forward – Art &amp; Theory</dt>

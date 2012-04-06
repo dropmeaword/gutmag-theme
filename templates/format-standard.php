@@ -9,8 +9,10 @@
 	<div class="gallery_top"><?php the_post_thumbnail(); ?>
 	</php>
 	
+	<!-- 
 	<div class="gallery_counter">1/13 _ previous / next / go to gallery </div>
 	<div class="gallery_description"> Photo descriptions can beplaced here.</div>
+	-->
 	</div>
 	<?php
 		endif;

@@ -18,13 +18,57 @@ Current Theme Options in the Wordpress dashboard. They
 can be overridden by the child theme.
 */
 
+/* @lfernandez: begin city selector */
+#citySelector {
+	margin: 12px 0 12px 0;
+}
+
+ul.tabSelector {
+	font: 0.75em/1.35em "AkzidenzGroteskBQLightRegular";
+	list-style: none;
+	/*display: inline;*/
+	/*padding: 12px 0 0 0;*/
+}
+
+ul.tabSelector li {
+	display: inline;
+	margin: 0 6px 0 0;
+}
+
 .highlight {
 	border: 1px solid #000; padding: 0 0.3em 0 0.3em;
 }
+/* @lfernandez: end city selector */
 
 /* @lfernandez: begin double column content */
 #teamList {
 margin-top: 2.5em;
+}
+
+#teamMembers {
+	width: 570px;
+	/*border: 1px solid black;*/
+}
+
+#teamMembers td {
+	width: 50%;
+	vertical-align: top;
+	/*border: 1px solid black;*/
+	padding: 0 35px 0 0;
+}
+
+#teamMembers td h4 {
+	margin: 0;
+	font-weight: bold;
+	font-size: 0.90em;
+}
+
+p.subtext {
+color: grey;
+font-size: 0.85em !important;
+font-style: italic !important;
+margin: 0 0 1em 0 !important;
+padding: 0 !important;
 }
 
 .gridblock {
@@ -46,12 +90,6 @@ padding: 0;
 font-size: 0.85em !important;
 }
 
-p.subtext {
-color: grey;
-font-style: italic !important;
-margin: 0 !important;
-padding: 0 !important;
-}
 /* @lfernandez: end double column content */
 
 /* @lfernandez: menu start */
@@ -60,13 +98,14 @@ ul.menu  li:before {
 }
 /* @lfernandez: menu end */
 
-/* BEGIN user editable area */
 body{
+	font: 1em/1.35em "AkzidenzGroteskBQLightRegular";
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	margin: 0;
 }
+
 .container{
 	width: 877.5px;
 	height: 100%;
@@ -78,28 +117,39 @@ body{
 
 /* @group header */
 
+.here {
+	border: 1px solid #000; 
+	padding: 0 0.3em 0 0.3em;
+	display: inline;
+}
 .headercontainer{
 	width: 877.5px;
     margin: 0 auto;
     margin-right: auto;
 	margin-left: auto;
 	margin-bottom: 0;
+	padding-top: 5em;
 }
-
 .header{
 	width: 575px;
 	padding-top: 12em;
 	float: left;
+	font: 0.8em AkzidenzGroteskBQRegular;
 }
-
-.logo
- {
-	height: 63px;
-	width: 240px;
+.logo {
 	float: left;
 	padding-left: 30px;
 	padding-top: 5em;
-
+}
+.logoImg {
+	display:block;
+	width:270px;
+	height:63px;
+	background-position:0px 0px;
+}
+.logoImg:hover {
+	background-position: 0px -63px;
+	
 }
 
 /* @end */

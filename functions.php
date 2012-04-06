@@ -1,5 +1,48 @@
 <?php  
 
+define('THEME_ROOT',				get_bloginfo('stylesheet_directory'));
+
+/* http://codex.wordpress.org/Function_Reference/get_post_format */
+function get_custom_post_format($post_id) {
+	$retval = get_post_format( $post_id );
+	if ( false === $retval )
+		$retval = 'standard';
+
+	return $retval;
+}
+
+/* @lfernandez BEGIN attached media */
+/**
+ * Get a list of all images attached to a post
+ */
+function get_all_gallery_images($post_id) {
+	$retval = array();
+	
+	$images = get_children(array(
+		'post_parent'    => $post_id,
+		'post_type'      => 'attachment',
+		'numberposts'    => -1, // show all
+		'post_status'    => null,
+		'post_mime_type' => 'image',
+	));
+
+	if( $images && !empty($images) ) {
+		foreach($images as $image) {
+			$imgtag = wp_get_attachment_image($image->ID, 'img-caroussel');
+			array_push($retval, $imgtag);
+		}
+	}
+	
+	return $retval;
+}
+
+/* 
+@note to get image title and description see this post:
+http://wordpress.org/support/topic/post-image-4
+*/
+
+/* @lfernandez END attached media */
+
 /* @lfernandez BEGIN calendar functions */
 function get_query_delimited_calendar($now, $then, $which) {
 	if( is_admin() ) {
@@ -49,7 +92,7 @@ function custom_excerpt_length($length) {
 }
 
 /* @lfernandez: add support for post formats */
-add_theme_support( 'post-formats', array( 'article', 'gallery', 'review' ) );
+add_theme_support( 'post-formats', array( 'gallery', 'standard' ) );
 
 // Shortcode to add wide margins to a post page - works as is, but is applied in post lists
 function wide_margins_shortcode ($atts, $content = null) {
@@ -62,74 +105,34 @@ add_shortcode("margin", "wide_margins_shortcode");
 // Path constants
 define('THEMELIB', get_template_directory() . '/library');
 
-/*
-// Load widgets
-require_once(THEMELIB . '/widgets.php');
-
-// Load options stylesheet
-require_once(THEMELIB . '/option-stylesheet.php');
-
-// Load theme options
-require_once(THEMELIB . '/theme-options.php');
-*/
-
-// Done importing
-
 //////////////
 // SIDEBARS //
 //////////////
 
 /* This section registers the various widget areas for WPFolio */
-	    
-if ( function_exists('register_sidebar') )
+if ( function_exists('register_sidebar') ) {
     register_sidebar(array(
 	'name'=>'Right pane search'
 	));
+}
 
-if ( function_exists('register_sidebar') )
+if ( function_exists('register_sidebar') ) {
     register_sidebar(array(
 	'name'=>'Right pane menu'
 	));
-		
+}
 
-/*	    
-	if ( function_exists('register_sidebar') )
+if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(
-	'name' => 'Footer Right',
-	'id' => 'footer_right',
+	'name' => 'Related content',
+	'id' => 'related_content',
 	'before_widget' => '<div id="%1$s" class="widget %2$s">',
 	'after_widget' => '</div>',
 	'before_title' => '',
 	'after_title' => '',
 	));
-	
-	if ( function_exists('register_sidebar') )
-	register_sidebar(array(
-	'name' => 'Footer Left',
-	'id' => 'footer_left',
-	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-	'after_widget' => '</div>',
-	'before_title' => '',
-	'after_title' => '',
-	));
-	
-	if ( function_exists('register_sidebar') )
-	register_sidebar(array(
-	'name' => 'Footer Center',
-	'id' => 'footer_center',
-	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-	'after_widget' => '</div>',
-	'before_title' => '',
-	'after_title' => '',
-	));
-	
-	register_sidebar(array('name'=>'calendar', 
-    'before_widget' => '<li id="%1$s" class="widget %2$s">',
-    'after_widget' => '</li>', 
-	'before_title' => '<h2 class="widgettitle">',
-    'after_title' => '</h2>', ));
-*/
-	
+}
+
 /* END Sidebars */
 
 
@@ -172,6 +175,9 @@ add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 575, 431, true );
 add_image_size( 'full-gallery-size', 960, 720, false );
 
+/* @lfernandez begin adding image size for gallery */
+add_image_size( 'img-caroussel', 880, 660, false );
+/* @lfernandez end adding image size for gallery */
 
 
 
@@ -201,12 +207,24 @@ add_custom_background();
 
 // enqueue jQuery
 //if you have a script that need jquery ... you don't need to call'it. You just have to put it in your dependancies.
-//wp_enqueue_script('jquery');
 
-wp_enqueue_script('hoverIntent', get_template_directory_uri().'/js/hoverIntent.js',array('jquery'));
+if( !is_admin() ){
+	wp_deregister_script('jquery');
+	wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"), false, '1.7.1');
+	wp_enqueue_script('jquery');
+	wp_enqueue_script('coda-slider', get_template_directory_uri().'/js/jquery.coda-slider-2.0.js'); /*,array('jquery', 'jquery-easing'));*/
+	wp_enqueue_script('init-slider', get_template_directory_uri().'/js/init-slider.js',array('coda-slider'));
+	wp_enqueue_script('coolclock', get_template_directory_uri().'/js/coolclock/coolclock.js'); /*,array('jquery'));*/
+	wp_enqueue_script('coolclock-skins', get_template_directory_uri().'/js/coolclock/moreskins.js'); /*,array('jquery', 'coolclock'));*/
+}
+
+//wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');
+wp_enqueue_script('hoverIntent', get_template_directory_uri().'/js/hoverIntent.js'); /*,array('jquery'));*/
 wp_enqueue_script('superfish', get_template_directory_uri().'/js/superfish.js',array('hoverIntent'));
 wp_enqueue_script('supersubs', get_template_directory_uri().'/js/supersubs.js',array('superfish'));
 wp_enqueue_script('wpfolio', get_template_directory_uri().'/js/wpfolio.js',array('supersubs'));
+wp_enqueue_script('jquery-easing', get_template_directory_uri().'/js/jquery.easing.1.3.js'); /*,array('jquery'));*/
+
 
 
 
