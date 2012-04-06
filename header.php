@@ -35,15 +35,15 @@
 	<div id="bottom"></div>	
 
 <div class='headercontainer'>
-	<?
-		global $g_show_gallery_backlink;
-		if( $g_show_gallery_backlink == true ):
-	?>
 		<div class="header">
+		<?
+			global $g_show_gallery_backlink;
+			if( $g_show_gallery_backlink == true ):
+		?>
 			<div class="here">GALLERY</div> 
 			<a href="<?php echo get_option('home'); ?>">&uarr; back</a>
-		</div> 
 	<? endif; ?>
+		</div> 
 
 	<div class="logo">
 		<a href="<?php echo get_option('home'); ?>"/><img src="<?php bloginfo('template_url'); ?>/images/gutmag_logo.png"/></a>
