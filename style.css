@@ -295,11 +295,13 @@ h2 a {
 
 .eventArea {
 	width: 272px;
+	
 	/*height: 410px;*/
-	padding-bottom: 0.8em;
+	padding-bottom: 30px;
 	margin: 0;
 	float: left;
 	position: relative;
+	height: 170px;
 }
 
 .eventMeta {
@@ -498,7 +500,10 @@ color: black;
 	font: 0.8em/1.1em "AkzidenzGroteskBQLightRegular";
 	padding-top: 0.2em;
 }
-
+.agendaDateBig {
+	padding-top: 0;
+	font: 2.2em/1em "AkzidenzGroteskBQLightRegular";
+}
 .agendaTitle {
 	text-transform: uppercase;	
 	font: 0.8em/1.1em "AkzidenzGroteskBQBold";
