@@ -220,6 +220,7 @@ if( !is_admin() ){
 }
 
 //wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');
+wp_enqueue_script('jquery');
 wp_enqueue_script('hoverIntent', get_template_directory_uri().'/js/hoverIntent.js'); /*,array('jquery'));*/
 wp_enqueue_script('superfish', get_template_directory_uri().'/js/superfish.js',array('hoverIntent'));
 wp_enqueue_script('supersubs', get_template_directory_uri().'/js/supersubs.js',array('superfish'));
