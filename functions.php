@@ -212,6 +212,7 @@ if( !is_admin() ){
 	wp_deregister_script('jquery');
 	wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"), false, '1.7.1');
 	wp_enqueue_script('jquery');
+	wp_enqueue_script('jquery-cookie', get_template_directory_uri().'/js/jquery.cookie.js',array('jquery'));
 	wp_enqueue_script('coda-slider', get_template_directory_uri().'/js/jquery.coda-slider-2.0.js'); /*,array('jquery', 'jquery-easing'));*/
 	wp_enqueue_script('init-slider', get_template_directory_uri().'/js/init-slider.js',array('coda-slider'));
 	wp_enqueue_script('coolclock', get_template_directory_uri().'/js/coolclock/coolclock.js'); /*,array('jquery'));*/

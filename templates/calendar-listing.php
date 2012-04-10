@@ -11,7 +11,7 @@ $calendarPosts = $wpdb->get_results($q, OBJECT);
     <h1 class="sidebarHeader"><a href="/calendar">Coming Up</a></h1>
 		<!-- <h5 class="city"><span class="highlight">AMSTERDAM</span> X LONDON</h5> -->
 		<div id="citySelector">
-			<ul class="tabSelector"><li class="highlight">AMSTERDAM</li><li>X</li><li><a href="#">LONDON</a></li></ul>
+			<ul class="tabSelector"><li id="nl" class="calendarSwitch">AMSTERDAM</li><li>X</li><li id="uk" class="calendarSwitch">LONDON</li></ul>
 		</div>
 		
     <div class="containsEvents" style="margin: 1em 0 1.85em 0;">

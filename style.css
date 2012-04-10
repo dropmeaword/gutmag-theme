@@ -33,6 +33,7 @@ ul.tabSelector {
 ul.tabSelector li {
 	display: inline;
 	margin: 0 6px 0 0;
+	cursor: pointer;
 }
 
 .highlight {

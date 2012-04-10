@@ -12,7 +12,7 @@
 		$filter = 'none';
 		include('templates/calendar-listing.php');
 	endif;
-    ?>
+  ?>
 	
 	<!-- <div class="line">&nbsp;</div> -->
 	<br/><br/>
