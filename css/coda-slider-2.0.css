@@ -54,14 +54,14 @@ noscript div {
 /* Arrow styling */
 .coda-nav-left a {
 	/*background-image: url(../images/controls/caroussel-left-arrow.gif);*/
-	color: #fff;
+	color: black;
 	width: 60px;
 	height: 60px;
 }
 	
 .coda-nav-right a {
 	/*background-image: url(../images/controls/caroussel-right-arrow.gif);*/
-	color: #fff;
+	color: black;
 	width: 60px;
 	height: 60px;
 }
@@ -136,11 +136,10 @@ float: left;
 }
 
 .coda-nav-right {
-	float: right;
+float: left;
 }
 
 .coda-nav-left a, .coda-nav-right a {
-display: block;
 text-align: center;
 text-decoration: none;
 }

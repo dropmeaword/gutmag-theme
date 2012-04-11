@@ -295,11 +295,13 @@ h2 a {
 
 .eventArea {
 	width: 272px;
+	
 	/*height: 410px;*/
-	padding-bottom: 0.8em;
+	padding-bottom: 30px;
 	margin: 0;
 	float: left;
 	position: relative;
+	height: 170px;
 }
 
 .eventMeta {
@@ -498,7 +500,10 @@ color: black;
 	font: 0.8em/1.1em "AkzidenzGroteskBQLightRegular";
 	padding-top: 0.2em;
 }
-
+.agendaDateBig {
+	padding-top: 0;
+	font: 2.2em/1em "AkzidenzGroteskBQLightRegular";
+}
 .agendaTitle {
 	text-transform: uppercase;	
 	font: 0.8em/1.1em "AkzidenzGroteskBQBold";
@@ -565,22 +570,22 @@ a {
 
 /* @group gallery */
 
+#sliderControllergallery {
+	font: 0.8em AkzidenzGroteskBQRegular;
+}
+
+
 .gallery_counter {
-	font:  0.7em/1.1em AkzidenzGroteskBQRegular;
-	padding-left: 0.3em;
-	padding-top: 0.3em;
-	width: 197px;
-	position: absolute;
-	color: white;
+	width: auto;
+	color: black;
+	display: inline;
+	float: left;
 }
 
 .gallery_description {
-	color: white;
-	font:  0.7em/1.1em AkzidenzGroteskBQRegular;
-	padding-top: 0.3em;
-	padding-bottom: 0.3em;
-	padding-left: 226px;
-	background-color: black;
+	color: black;
+	float: left;
+	padding-left: 0.5em;
 }
 
 .gallery_top {
@@ -601,6 +606,8 @@ a {
 .gallery-caption{
 	margin-left: 0;
 }
+
+
 /* @end */
 
 /* @group fonts */
