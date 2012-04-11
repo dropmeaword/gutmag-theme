@@ -1,3 +1,7 @@
+function scrollToId(id){
+     	$('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
+}
+
 /* on document load */
 jQuery(document).ready(function() {
 	jQuery('ul.sf-menu').superfish();

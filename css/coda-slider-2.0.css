@@ -76,6 +76,11 @@ noscript div {
 .coda-slider .panel-wrapper {
 	padding: 0;
 }
+
+.coda-slider .panel-wrapper h2 {
+	display: none;
+}
+
 	
 /* Preloader */
 .coda-slider p.loading {

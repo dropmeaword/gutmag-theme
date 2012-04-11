@@ -28,8 +28,9 @@ function get_all_gallery_images($post_id) {
 
 	if( $images && !empty($images) ) {
 		foreach($images as $image) {
-			$imgtag = wp_get_attachment_image($image->ID, 'img-caroussel');
-			array_push($retval, $imgtag);
+			$imgtag  = wp_get_attachment_image($image->ID, 'img-caroussel');
+			$caption = $image->post_excerpt;
+			array_push($retval, array('imgtag' => $imgtag, 'caption' => $caption) );
 		}
 	}
 	

@@ -34,7 +34,8 @@ $.fn.codaSlider = function(settings) {
 		firstPanelToLoad: 1,
 		panelTitleSelector: "h2.title",
 		slideEaseDuration: 1000,
-		slideEaseFunction: "easeInOutExpo"
+		slideEaseFunction: "easeInOutExpo",
+		callbackOnSlide : null,
 	}, settings);
 	
 	return this.each(function(){
@@ -76,6 +77,13 @@ $.fn.codaSlider = function(settings) {
 		} else { 
 			var currentPanel = 1;
 		};
+		
+		/*console.log(panelObj);*/
+		
+		// when loaded and initialized call the callback for the first time to set the correct label
+		var captionText = $('div.panel:nth-child('+currentPanel+') h2').text();
+		if (settings.callbackOnSlide) { settings.callbackOnSlide({ current: currentPanel, total: panelCount, caption: captionText}); }
+		
 			
 		// Left arrow click
 		$("#coda-nav-left-" + sliderCount + " a").click(function(){
@@ -93,6 +101,8 @@ $.fn.codaSlider = function(settings) {
 			};
 			$('.panel-container', slider).animate({ marginLeft: offset }, settings.slideEaseDuration, settings.slideEaseFunction);
 			if (settings.crossLinking) { location.hash = currentPanel }; // Change the URL hash (cross-linking)
+			captionText = $('div.panel:nth-child('+currentPanel+') h2').text();
+			if (settings.callbackOnSlide) { settings.callbackOnSlide({ current: currentPanel, total: panelCount, caption: captionText}); }
 			return false;
 		});
 			
@@ -112,6 +122,8 @@ $.fn.codaSlider = function(settings) {
 			};
 			$('.panel-container', slider).animate({ marginLeft: offset }, settings.slideEaseDuration, settings.slideEaseFunction);
 			if (settings.crossLinking) { location.hash = currentPanel }; // Change the URL hash (cross-linking)
+			captionText = $('div.panel:nth-child('+currentPanel+') h2').text();
+			if (settings.callbackOnSlide) { settings.callbackOnSlide({ current: currentPanel, total: panelCount, caption: captionText}); }
 			return false;
 		});
 		
@@ -172,6 +184,8 @@ $.fn.codaSlider = function(settings) {
 					// Slide
 					$('.panel-container', slider).animate({ marginLeft: offset }, settings.slideEaseDuration, settings.slideEaseFunction);
 					if (!settings.crossLinking) { return false }; // Don't change the URL hash unless cross-linking is specified
+					captionText = $('div.panel:nth-child('+currentPanel+') h2').text();
+					if (settings.callbackOnSlide) { settings.callbackOnSlide({ current: currentPanel, total: panelCount, caption: captionText}); }
 				});
 			};
 		});
@@ -221,6 +235,7 @@ $.fn.codaSlider = function(settings) {
 				slider.siblings('.coda-nav').find('a').removeClass('current').parents('ul').find('li:eq(' + (currentPanel - 1) + ') a').addClass('current');
 				// Slide:
 				$('.panel-container', slider).animate({ marginLeft: offset }, settings.slideEaseDuration, settings.slideEaseFunction);
+				if (settings.callbackOnSlide) { settings.callbackOnSlide({ current: currentPanel, total: panelCount}); }
 				setTimeout(autoSlide,settings.autoSlideInterval);
 			};
 		};

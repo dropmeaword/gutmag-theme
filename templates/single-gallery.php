@@ -3,14 +3,20 @@ $g_show_backlink = 'gallery';
 get_header();
 ?> 
 
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	scrollToId('galleryScrollPoint');
+});
+</script>
+
 <div class="container">  
 <!--	<div id="content">-->
-
+	<a id="galleryScrollPoint"></a>
 	<div id="sliderControllergallery">
-		<span class="gallery_counter">1/13</span><span class="gallery_counter"> &nbsp;|&nbsp; </span>
+		<span id="photoLocatorPlaceholder" class="gallery_counter">1/13</span><span class="gallery_counter"> &nbsp;|&nbsp; </span>
 		<div class="coda-nav-left" id="coda-nav-left-1"><a href="#" title="Previous">previous</a> /&nbsp; </div> 
 		<div class="coda-nav-right" id="coda-nav-right-1"><a href="#" title="Next"> next</a>&nbsp;|</div>	
-		<div class="gallery_description">Photo descriptions can beplaced here.</div>
+		<div id="captionPlaceholder" class="gallery_description">Photo descriptions can beplaced here. And they might be rather long too, but maybe not too long.</div>
 	</div>
 
 	<div class="coda-slider-wrapper">
@@ -18,13 +24,14 @@ get_header();
 
 			<? /* then we get all other images attached to this post */ ?>
 			<?
-			$imagetags = get_all_gallery_images( get_the_ID() );
-			if( $imagetags && !empty($imagetags) ):
-				foreach($imagetags as $itag):
+			$images = get_all_gallery_images( get_the_ID() );
+			if( $images && !empty($images) ):
+				foreach($images as $i):
 			?>
 			<div class="panel">
 				<div class="panel-wrapper">
-					<?= $itag ?>
+					<h2><?= $i['caption'] ?></h2>
+					<?= $i['imgtag'] ?>
 				</div>
 			</div>
 			<? 
