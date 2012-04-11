@@ -23,7 +23,7 @@
 		<!-- <div class="line">&nbsp;</div>-->
 		<dl class="post_info">
 			<dt class="agendaListing" style="margin-bottom: 0.85em;"><? the_tags('', '&nbsp;', ''); ?></dt>
-			<dt class="author" >by <?php the_author(); ?></dt>
+			<dt class="author" >by <?php the_author_posts_link(); ?>  <!--<?php the_author(); ?>-->  </dt>
 		</dl>
 	</div><!--END POST TITLE-->
 	

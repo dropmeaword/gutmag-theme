@@ -1,0 +1,1 @@
+<p>The archive by tag is disabled</p>
