@@ -3,12 +3,25 @@
 	&uarr; <a class="back" href="<?php echo get_option('home'); ?>">back</a> 
 	<div class="line">&nbsp;</div>
 	<span class='commentSidebar'>more from this author:</span>
-	<dl class="articlesAuthorArea"> 
-		<dt class="articleTitle"><a href="source">Things that mind their own business</a></dt>
-		<dt class="articleTitle"><a href="source">Contrary to populair believe</a></dt>
-		<dt class="articleTitle"><a href="source">Article title this</a></dt>
-		<dt class="articleTitle"><a href="source">Article title that</a></dt>
+	<?php
+		$authorId = get_the_author_meta('ID');
+		//print_r($authorId);
+		//print_r($post->ID);
+		$morePosts = get_other_posts_by_author($authorId, $post->ID);
+		if( !empty($morePosts) ):
+	?>
+	<dl class="articlesAuthorArea">
+	<?php
+		foreach( $morePosts as $otherPost ):
+	?>
+		<dt><a href="<?= $otherPost['permalink'] ?>"><?= $otherPost['title'] ?></a></dt>
+	<?php
+		endforeach;
+	?>
 	</dl>
+	<?php
+		endif;
+	?>
 	<div class="line">&nbsp;</div>
 	<span class='commentSidebar'>similar articles:</span>
 	<dl class="articlesAuthorArea"> 

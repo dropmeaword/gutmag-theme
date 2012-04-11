@@ -208,8 +208,9 @@ only screen and (min-device-width: 768px) and (max-device-width: 1024px)
 }
 
 .articlesAuthorArea {
-	margin-top: 0;
+	margin-top: 0.25em;
 }
+
 .articlesAuthorArea dt {
 	padding-bottom: 0.2em;
 }
@@ -483,9 +484,10 @@ color: black;
 	margin-bottom: 0.3em;
 }
 
-.articleTitle {
+dl.articlesAuthorArea dt {
 	text-transform: uppercase;	
 	font: 0.8em/1.3em "AkzidenzGroteskBQMedium";
+	padding-bottom: 0.5em;
 }
 
 .articleAuthor {

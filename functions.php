@@ -2,6 +2,24 @@
 
 define('THEME_ROOT',				get_bloginfo('stylesheet_directory'));
 
+
+/**
+ * Get other posts by same author excluding the current post
+ */
+function get_other_posts_by_author($authorId, $postId) {
+	$retval = array();
+
+	$authors_posts = get_posts( array( 'author' => $authorId, 'post__not_in' => array( $postId ) ) );
+
+	foreach ( $authors_posts as $authors_post ) {
+		$title = apply_filters( 'the_title', $authors_post->post_title, $authors_post->ID );
+		$plink = get_permalink( $authors_post->ID );
+		array_push($retval, array('title' => $title, 'permalink' => $plink ) );
+	}
+
+	return $retval;
+}
+
 /* http://codex.wordpress.org/Function_Reference/get_post_format */
 function get_custom_post_format($post_id) {
 	$retval = get_post_format( $post_id );
