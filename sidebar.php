@@ -24,7 +24,8 @@
 	</ul>
 
 	<div class="issues">
-		<? include('templates/sidebar-issues.php')?>
+		<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('Issues')) ; ?> 
+		<? /*include('templates/sidebar-issues.php'); */ ?>
 	</div>
 	
 	<div class='footerSidebar'><?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('Footer sidebar') ) ; ?> </div>

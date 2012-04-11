@@ -142,6 +142,12 @@ if ( function_exists('register_sidebar') ) {
 }
 
 if ( function_exists('register_sidebar') ) {
+    register_sidebar(array(
+	'name'=>'Issues'
+	));
+}
+
+if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(
 	'name' => 'Related content',
 	'id' => 'related_content',

@@ -288,6 +288,17 @@ h2 a {
 	margin:  1.85em 0 .45em 0;
 }
 
+/* @group event related styles */
+.calendar h2 {
+	margin-top: 2.0em 0 1.50em 0;
+	font: 1.55em "MagnusEFRegular";
+}
+
+.eventRegion {
+	margin: 2em 0 4em 0;
+	/*margin: 1.50em 0 8em 0;*/
+}
+
 .eventAreaRow {
 	overflow: hidden;
   width: 100%;
@@ -330,8 +341,6 @@ h2 a {
 	padding-top: 1em;
 	padding-bottom: 0.5em;
 }
-
-
 
 /* @end */
 
