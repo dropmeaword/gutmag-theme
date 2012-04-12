@@ -455,9 +455,7 @@ color: black;
 }
 
 .rightPaneMenu  {
-	font: 0.75em/0.8em 		
-	AkzidenzGroteskBQRegular;
-
+	font: 0.75em/0.8em AkzidenzGroteskBQRegular;
 }
 
 
@@ -541,11 +539,17 @@ dl.articlesAuthorArea dt {
 div.itemsocial ul li{
 	display: inline;
 }
+
 div.itemsocial {
-	padding-top: 1em;
-	padding-bottom: 0;
+	padding: 1em 0 0 0;
+	margin: 0 0 2.2em 0;
 }
 
+.social_facebook {
+	font: 0.75em/0.8em AkzidenzGroteskBQRegular;
+	padding-left: 22px;
+	background: transparent url('icon/facebook.png') no-repeat center left;
+}
 
 /* @end */
 
