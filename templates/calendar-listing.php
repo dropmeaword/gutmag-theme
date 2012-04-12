@@ -9,7 +9,6 @@ $calendarPosts = $wpdb->get_results($q, OBJECT);
 
 <section class="agendaArea">
     <h1 class="sidebarHeader"><a href="/calendar">Coming Up</a></h1>
-		<!-- <h5 class="city"><span class="highlight">AMSTERDAM</span> X LONDON</h5> -->
 		<div id="citySelector">
 			<ul class="tabSelector"><li id="nl" class="calendarSwitch">AMSTERDAM</li><li>X</li><li id="uk" class="calendarSwitch">LONDON</li></ul>
 		</div>
@@ -33,9 +32,10 @@ if( $calendarPosts ):
 			<dl style="margin: 0.90em 0 0 0;">
 				<dt class="agendaDate"><? echo $begins.$separator.$ends;  ?></dt>
 				<dt><a class="agendaTitle" href="<?php the_permalink() ?>"><?php the_title(); ?></a></dt>
-				<dt class="agendaVenue"><?php echo get('venue_name'); echo', '; echo get('venue_address') ?></dt>
 				<dt class="agendaListing"><? the_tags('', '&nbsp;', ''); ?></dt>
-				<!-- <dt class="agendaExc""><?php echo preg_replace('/<p>(.+?)<\/p>/','$1',get_the_excerpt()); ?> <a href="<?php the_permalink() ?>" class="more-link"><?php _e('Read more', 'ia3'); ?></a></dt> -->
+				<dt class="agendaVenue"><?php echo get('venue_name'); echo', '; echo get('venue_address') ?></dt>
+				<dt class="agendaVenue"><?php echo get('venue_price'); ?></dt>
+				<dt class="agendaExc""><?php echo preg_replace('/<p>(.+?)<\/p>/','$1',get_the_excerpt()); ?></dt>
 			</dl>
 <?php 
 			endforeach; 
