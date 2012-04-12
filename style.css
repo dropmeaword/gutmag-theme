@@ -545,6 +545,14 @@ div.itemsocial {
 	margin: 0 0 2.2em 0;
 }
 
+div.social-single {
+	margin: 3em 0 0 0;
+}
+
+.addthis_button {
+	font: 0.8em AkzidenzGroteskBQRegular;
+}
+
 .social_facebook {
 	font: 0.75em/0.8em AkzidenzGroteskBQRegular;
 	padding-left: 22px;

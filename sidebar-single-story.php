@@ -1,6 +1,9 @@
 <!-- lf begin: this is out sidebar, defined in sidebar.php -->
 <div id="sidebar">
 	&uarr; <a class="back" href="<?php echo get_option('home'); ?>">back</a> 
+
+	<? include('templates/social-share-buttons.php'); ?>
+
 	<div class="line">&nbsp;</div>
 	<span class='commentSidebar'>more from this author:</span>
 	<?php
@@ -30,13 +33,6 @@
 		<dt class="articleTitle"><a href="source">About Different Diets for Your Cat</a></dt>
 		<dt class="articleTitle"><a href="source">Is the Cat the True "Man's Best Friend?</a></dt>
 	</dl>
-	
-	
-	
-	<div class="line">&nbsp;</div>
-	<? include('templates/social-buttons.php'); ?>
-	
-	
 	
 	
 	

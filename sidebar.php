@@ -17,16 +17,22 @@
 	<!-- <div class="line">&nbsp;</div> -->
 	<br/><br/>
 
-	<? include('templates/social-buttons.php'); ?>
+	<? include('templates/social-home-buttons.php'); ?>
 	<!-- mh: menu widget 'right pane menu' in bottom of sidebar-->
 	<ul class="rightPaneMenu">
 	<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('Right pane menu')) ; ?> 
 	</ul>
 
 	<div class="issues">
-		<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('Issues')) ; ?> 
-		<? /*include('templates/sidebar-issues.php'); */ ?>
+		<!--<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('Issues')) ; ?> -->
+		<? include('templates/sidebar-issues.php'); ?>
 	</div>
+
+	<!--
+	<div class="adFreeBlock">
+		<a href="http://www.adfreeblog.org/" target="_blank"><img src="http://www.adfreeblog.org/art_not_ads.jpg"></a>
+	</div>
+	-->
 	
 	<div class='footerSidebar'><?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('Footer sidebar') ) ; ?> </div>
 	
