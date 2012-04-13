@@ -1,29 +1,24 @@
 	<div class="authorBio">
-	<h3>About <?php the_author(); ?></h3>
+	<h2>About <?php the_author_meta('display_name', $_GET['author']); ?></h2>
 	<?php the_author_meta('description', $_GET['author']); ?>
 	</div>
 	
-		<?php 
-		while (have_posts()) : the_post(); 
+	<div id="authorContributions">
+	<p>GUTmag has published the following contributions by <?php the_author_meta('display_name', $_GET['author']); ?>.</p>
+		<?php
+			if( have_posts() ):
+				while (have_posts()): the_post(); 
 		?>
 			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<dt class="agendaDate" style="margin-bottom: 8px;"><?php the_time('d.m.Y'); ?></dt>
+				<h2 class="post-title"><a href="<? the_permalink(); ?>"><?php the_title(); ?></a></h2>
+				<div class="space"></div>
+			</div> <!-- #post-id -->
 
-			<div class="title-area">
-				<h2 class="post-title" ><?php the_title(); ?></h2>
-				<!-- <div class="line">&nbsp;</div> -->
-				<dl class="post_info">
-					<dt class="agendaListing" style="margin-bottom: 0.85em;"><? the_tags('', '&nbsp;', ''); ?></dt>
-					<dt class="agendaDate" style="margin-bottom: 8px;"><?php the_date('d.m.Y'); ?></dt>
-					<dt class="author" >by <?php the_author(); ?></dt>
-				</dl>
-				<!-- <div class="item social"><? include('templates/social-buttons.php'); ?></div> -->
-			</div><!--END POST TITLE-->
-			
-			
-			<?php the_content(); ?>  
-
-			<div class="line">&nbsp;</div>
-			<div class="space"></div>
-		</div> <!-- #post-id -->
-
-		<?php endwhile; ?>
+		<?php 
+				endwhile;
+			else:
+				_e('No posts by this author were found.');
+			endif;
+		?>
+	</div>
