@@ -1,8 +1,18 @@
 <?php
 
 global $wpdb;
-$q =  get_query_current_calendar_NL();
+
+switch( $filter ):
+	case 'uk':
+		$q =  get_query_current_calendar_UK();
+		break;
+	case 'nl':
+		$q =  get_query_current_calendar_NL();
+		break;
+endswitch;
+
 $calendarPosts = $wpdb->get_results($q, OBJECT);
+
 /* echo "query events: ".$q; */
 
 ?>
