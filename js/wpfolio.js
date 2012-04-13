@@ -1,6 +1,23 @@
+/* @begin scrolling shenannigans */
+function moveScroller() {
+  var a = function() {
+    var b = $(window).scrollTop();
+    var d = $("#scroller-anchor").offset().top;
+    if ( b > (d-40) ) {
+      $("#scroller").css({position:"fixed",top:"40px"})
+    } else {
+      if ( b <= d) {
+        $("#scroller").css({position:"relative",top:""})
+      }
+    }
+  };
+  $(window).scroll(a);a()
+}
+
 function scrollToId(id){
      	$('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
 }
+/* @end scrolling shenannigans */
 
 /* on document load */
 jQuery(document).ready(function() {
