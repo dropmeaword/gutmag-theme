@@ -148,4 +148,15 @@ float: left;
 text-align: center;
 text-decoration: none;
 }
-	
+
+/* @lfernandez begin */
+img.attachment-img-caroussel {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+div.embed {
+	margin-top: 40px;  /* this margin will center embedded videos in the slider frame */
+}
+/* @lfernandez end */	
