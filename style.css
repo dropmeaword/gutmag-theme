@@ -18,6 +18,39 @@ Current Theme Options in the Wordpress dashboard. They
 can be overridden by the child theme.
 */
 
+/* @begin issue listings */
+.issuesSidebar dd {
+	font-size: 0.75em;
+	margin: 0.60em 0 0 0;
+	padding: 0;
+}
+
+li.widget {
+	list-style: none;
+	margin: 0.95em 0 0 0;
+}
+
+.TagWidget h2 {
+	background-color: black;
+	font: 0.8em/1.2em "AkzidenzGroteskBQLightRegular";
+	color: white;
+	display: inline-block;
+	padding: 2px 6px 2px 6px !important;
+	/*margin-bottom: 0.3em !important;*/
+}
+
+ul.posts-by-tag-list {
+	font-size: 0.9em;
+	margin: 0.30em 0 0 6px !important;
+	line-height: 10px !important;
+}
+
+li.posts-by-tag-item small {
+	font: 0.8em/1.2em "AkzidenzGroteskBQLightRegular";
+}
+
+/* @end issue listings */
+
 /* @lfernandez: begin city selector */
 #citySelector {
 	margin: 12px 0 12px 0;
@@ -209,6 +242,37 @@ only screen and (min-device-width: 768px) and (max-device-width: 1024px)
 
 .articlesAuthorArea {
 	margin-top: 0.25em;
+}
+
+.authorBio {
+	margin: 0 0 3em 0;
+}
+
+.authorBio h2 {
+	margin: 0 0 0.65em 0;
+	padding: 0 !important;
+}
+
+
+div.relatedPostsArea {
+	margin-top: 0.25em;
+}
+
+div.relatedPostsArea h3 {
+	font: italic 0.7em AkzidenzGroteskBQRegular;
+	margin: 0;
+	padding: 0;
+	line-height: 1em;
+}
+
+ul.related_post {
+	margin: 0.50em 0 0 0 !important;
+}
+
+ul.related_post li {
+	text-transform: uppercase;	
+	font: 0.8em/1.3em "AkzidenzGroteskBQMedium";
+	padding-bottom: 0.5em;
 }
 
 .articlesAuthorArea dt {
@@ -501,7 +565,8 @@ dl.articlesAuthorArea dt {
 	font: italic 0.7em/1.3em AkzidenzGroteskBQRegular;
 }
 
-.author {
+
+.authorName {
 	font: italic 0.7em/1.3em AkzidenzGroteskBQRegular;
 }
 

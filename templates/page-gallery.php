@@ -30,7 +30,7 @@
 						<div class="line">&nbsp;</div>
 						<dl class="post_info">
 							<dt class="agendaListing" style="margin-bottom: 0.85em;"><? the_tags('', '&nbsp;', ''); ?></dt>
-							<dt class="author" >by <?php the_author(); ?></dt>
+							<dt class="authorName" >by <?php the_author(); ?></dt>
 						</dl>
 						<!-- <div class="item social"><? include('templates/social-buttons.php'); ?></div> -->
 					</div><!--END POST TITLE-->

@@ -24,8 +24,11 @@
 	</ul>
 
 	<div class="issues">
-		<!--<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('Issues')) ; ?> -->
-		<? include('templates/sidebar-issues.php'); ?>
+		<div class="issuesSidebar">
+			<h1 class="sidebarHeader">Issues</h1>
+				<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('Issues')) ; ?>
+				<? /*include('templates/sidebar-issues.php');*/ ?>
+		</div>
 	</div>
 
 	<!--
