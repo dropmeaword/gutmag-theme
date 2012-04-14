@@ -3,6 +3,26 @@
 define('THEME_ROOT',				get_bloginfo('stylesheet_directory'));
 
 
+/** get calendar selector from cookie */
+function get_calendar_from_cookie() {
+	if( $_COOKIE['whichcalendar'] === 'uk') {
+		return 'UK Agenda';
+	} else {
+		return 'NL Agenda';
+	}
+}
+
+/** get city name from cookie */
+function get_city_name_from_cookie() {
+	if( $_COOKIE['whichcalendar'] === 'uk') {
+		return 'London';
+	} else {
+		return 'Amsterdam';
+	}
+}
+
+
+
 /**
  * Get other posts by same author excluding the current post
  */
@@ -63,14 +83,24 @@ http://wordpress.org/support/topic/post-image-4
 /* @lfernandez END attached media */
 
 /* @lfernandez BEGIN calendar functions */
-function get_query_delimited_calendar($now, $then, $which) {
+function get_query_ongoing_calendar($now, $which) {
+	$cond = "(CAST(starts.meta_value AS DATE) < '{$now}') AND	(CAST(ends.meta_value AS DATE)  > '{$now}')";
+	return get_query_calendar($which, $cond);
+}
+
+function get_query_upcoming_calendar($start, $which) {
+		$cond = "(CAST(starts.meta_value AS DATE) >= '{$start}')";
+		return get_query_calendar($which, $cond);
+}
+
+function get_query_calendar($which, $condition) {
 	if( is_admin() ) {
 		$condStatus = "AND (wp_posts.post_status = 'publish' OR wp_posts.post_status = 'private')";
 	} else {
 		$condStatus = "AND (wp_posts.post_status = 'publish')";
 	}
 	
-	return <<<SQL
+	$retval = <<<SQL
 SELECT SQL_CALC_FOUND_ROWS wp_posts.*,
 starts.meta_value AS agenda_begins,
 ends.meta_value AS agenda_ends,
@@ -82,12 +112,22 @@ INNER JOIN wp_postmeta AS which ON (wp_posts.ID = which.post_id AND which.meta_k
 WHERE 1=1 
 AND wp_posts.post_type = 'event' 
 {$condStatus}
-AND ( (CAST(starts.meta_value AS DATE) BETWEEN '{$now}' AND '{$then}') 
-		OR (CAST(ends.meta_value AS DATE)  BETWEEN '{$now}' AND '{$then}') 
-	) 
+AND (
+	{$condition}
+) 
 AND (CAST(which.meta_value AS CHAR) LIKE '%{$which}%') 
-GROUP BY wp_posts.ID ORDER BY starts.meta_value DESC
+GROUP BY wp_posts.ID 
+ORDER BY starts.meta_value ASC
 SQL;
+
+	return $retval;
+}
+
+function get_query_delimited_calendar($now, $then, $which) {
+	$cond = "(CAST(starts.meta_value AS DATE) BETWEEN '{$now}' AND '{$then}') 
+		OR (CAST(ends.meta_value AS DATE)  BETWEEN '{$now}' AND '{$then}')";
+
+	return get_query_calendar($which, $cond);
 }
 
 function get_query_current_calendar_NL() {
@@ -199,6 +239,7 @@ function get_thumb ($post_ID){
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 575, 431, true );
 add_image_size( 'full-gallery-size', 960, 720, false );
+add_image_size( 'calendar-thumbnail', 270, 170, true );
 
 /* @lfernandez begin adding image size for gallery */
 add_image_size( 'img-caroussel', 880, 660, false );

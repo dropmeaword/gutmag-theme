@@ -40,11 +40,22 @@ jQuery(document).ready(function() {
 	});
 	/* end: code for the city selector */
 
-	/* begin: image hovers on calendar */
-	$('div.eventArea').hover(function(){
-		$(this).find('img').fadeOut("fast"); //.css({visibility: 'hidden'}); //animate({top:'182px'},{queue:false,duration:500});
+	jQuery('div.withImage').find('.eventMeta').fadeOut('fast');
+	jQuery('div.withImage').hover(function(){
+		jQuery(this).find('.eventMeta').fadeIn("fast");
+		jQuery(this).find('img').fadeOut("slow");
 	}, function(){
-		$(this).find('img').fadeIn("fast"); //.css({visibility: 'visible'});
+		jQuery(this).find('.eventMeta').fadeOut("fast");
+		jQuery(this).find('img').fadeIn("slow");
 	});
+	
+	/* begin: image hovers on calendar */
+	/*
+	jQuery('div.eventArea').hover(function(){
+		jQuery(this).find('img').fadeOut("fast"); //.css({visibility: 'hidden'}); //animate({top:'182px'},{queue:false,duration:500});
+	}, function(){
+		jQuery(this).find('img').fadeIn("fast"); //.css({visibility: 'visible'});
+	});
+	*/
 	/* end: image hovers in calendar */
 });
