@@ -39,5 +39,12 @@ jQuery(document).ready(function() {
 		}
 	});
 	/* end: code for the city selector */
-	
+
+	/* begin: image hovers on calendar */
+	$('div.eventArea').hover(function(){
+		$(this).find('img').fadeOut("fast"); //.css({visibility: 'hidden'}); //animate({top:'182px'},{queue:false,duration:500});
+	}, function(){
+		$(this).find('img').fadeIn("fast"); //.css({visibility: 'visible'});
+	});
+	/* end: image hovers in calendar */
 });
