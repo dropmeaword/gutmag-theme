@@ -282,6 +282,7 @@ if( !is_admin() ){
 	wp_enqueue_script('coda-slider', get_template_directory_uri().'/js/jquery.coda-slider-2.0.js'); /*,array('jquery', 'jquery-easing'));*/
 	wp_enqueue_script('init-slider', get_template_directory_uri().'/js/init-slider.js',array('coda-slider'));
 	wp_enqueue_script('coolclock', get_template_directory_uri().'/js/coolclock/coolclock.js'); /*,array('jquery'));*/
+	wp_enqueue_script('gutmag-core', get_template_directory_uri().'/js/gutmag-core.js',array('jquery'));
 	wp_enqueue_script('coolclock-skins', get_template_directory_uri().'/js/coolclock/moreskins.js'); /*,array('jquery', 'coolclock'));*/
 }
 
