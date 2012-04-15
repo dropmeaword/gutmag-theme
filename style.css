@@ -39,13 +39,17 @@ li.widget {
 	/*margin-bottom: 0.3em !important;*/
 }
 
-ul.posts-by-tag-list {
+dl.posts-by-tag-list {
 	font-size: 0.9em;
 	margin: 0.30em 0 0 6px !important;
 	line-height: 10px !important;
 }
 
-li.posts-by-tag-item small {
+dl.posts-by-tag-list dt {
+	margin-top: 0.25em;
+}
+
+dl.posts-by-tag-item dd {
 	font: 0.8em/1.2em "AkzidenzGroteskBQLightRegular";
 }
 
