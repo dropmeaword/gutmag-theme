@@ -376,6 +376,14 @@ h2 a {
 	/*margin: 1.50em 0 8em 0;*/
 }
 
+.greyOut {
+	color: grey !important;
+}
+
+.greyOutBg {
+	background: grey !important;
+}
+
 .eventArea {
 	width: 270px;
 	

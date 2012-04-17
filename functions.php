@@ -102,15 +102,17 @@ http://wordpress.org/support/topic/post-image-4
 /* @lfernandez BEGIN calendar functions */
 function get_query_ongoing_calendar($now, $which) {
 	$cond = "(CAST(starts.meta_value AS DATE) < '{$now}') AND	(CAST(ends.meta_value AS DATE)  > '{$now}')";
-	return get_query_calendar($which, $cond);
+	$orderby = "ORDER BY ends.meta_value ASC";
+	return get_query_calendar($which, $cond, $orderby);
 }
 
 function get_query_upcoming_calendar($start, $which) {
 		$cond = "(CAST(starts.meta_value AS DATE) >= '{$start}')";
-		return get_query_calendar($which, $cond);
+		$orderby = "ORDER BY starts.meta_value ASC";
+		return get_query_calendar($which, $cond, $orderby);
 }
 
-function get_query_calendar($which, $condition) {
+function get_query_calendar($which, $condition, $orderby) {
 	if( is_admin() ) {
 		$condStatus = "AND (wp_posts.post_status = 'publish' OR wp_posts.post_status = 'private')";
 	} else {
@@ -134,7 +136,7 @@ AND (
 ) 
 AND (CAST(which.meta_value AS CHAR) LIKE '%{$which}%') 
 GROUP BY wp_posts.ID 
-ORDER BY starts.meta_value ASC
+{$orderby}
 SQL;
 
 	return $retval;
@@ -143,8 +145,8 @@ SQL;
 function get_query_delimited_calendar($now, $then, $which) {
 	$cond = "(CAST(starts.meta_value AS DATE) BETWEEN '{$now}' AND '{$then}') 
 		OR (CAST(ends.meta_value AS DATE)  BETWEEN '{$now}' AND '{$then}')";
-
-	return get_query_calendar($which, $cond);
+	$orderby = "ORDER BY starts.meta_value ASC";
+	return get_query_calendar($which, $cond, $orderby);
 }
 
 function get_query_current_calendar_NL() {

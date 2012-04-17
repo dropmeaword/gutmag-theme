@@ -34,7 +34,7 @@
 	</div>
 	<?php
 			/* put a blank after block, except every third */
-			if( ($i % 3) != 0 ) { echo '<div class="emptyArea">	</div>'; } 
+			/*if( ($i % 3) != 0 ) { echo '<div class="emptyArea">	</div>'; } */
 	?>
 <?php
 			$i++;
