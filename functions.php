@@ -44,7 +44,8 @@ function get_calendar_event_label( $tags ) {
 
 
 function remove_functional_tags($tags, $to_remove = array('featured', 'reviewed', 'london', 'amsterdam') ) {
-	return array_diff($tags, $to_remove);
+	$darr = array_diff($tags, $to_remove);
+	return array_values($darr);
 }
 
 /**

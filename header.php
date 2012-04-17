@@ -48,7 +48,7 @@
 						break;
 					case 'calendar':
 					?>
-							<div class="here">CALENDAR</div> 
+							<div class="here"><?= get_city_name_from_cookie(); ?> CALENDAR</div> 
 							<a href="<?php echo get_option('home'); ?>">&uarr; back</a>
 					<?
 						break;
