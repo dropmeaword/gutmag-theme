@@ -39,7 +39,7 @@ jQuery(document).ready(function() {
 		}
 	});
 	/* end: code for the city selector */
-
+	/*
 	jQuery('div.withImage').find('.eventMeta').fadeOut('fast');
 	jQuery('div.withImage').hover(function(){
 		jQuery(this).find('.eventMeta').fadeIn("fast");
@@ -47,6 +47,16 @@ jQuery(document).ready(function() {
 	}, function(){
 		jQuery(this).find('.eventMeta').fadeOut("fast");
 		jQuery(this).find('img').fadeIn("slow");
+	});
+	*/
+
+	jQuery('div.withImage').find('img').fadeOut('fast');
+	jQuery('div.withImage').hover(function(){
+		jQuery(this).find('img').fadeIn("fast");
+		jQuery(this).find('.eventMeta').fadeOut("slow");
+	}, function(){
+		jQuery(this).find('img').fadeOut("fast");
+		jQuery(this).find('.eventMeta').fadeIn("slow");
 	});
 	
 	/* begin: image hovers on calendar */
