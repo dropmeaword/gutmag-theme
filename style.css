@@ -365,20 +365,22 @@ h2 a {
 .calendar-header {
 	font: 14pt "AkzidenzGroteskBQLightRegular" !important;;
 	margin-bottom: 12px !important;
+	padding: 0 0 0 4px;
 }
 
 .eventRegion {
 	width: 280px;
 	float: left;
-	margin: 0 12px 0 0;
+	margin: 0 10px 0 0;
+	border-left: 1px dotted black;
 	/*margin: 1.50em 0 8em 0;*/
 }
 
 .eventArea {
-	width: 272px;
+	width: 270px;
 	
 	/*height: 410px;*/
-	padding-bottom: 30px;
+	padding: 0 0 30px 8px;
 	margin: 0;
 	float: left;
 	position: relative;

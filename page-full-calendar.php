@@ -42,6 +42,8 @@ get_header();
 <!-- <?= $cityName ?> -->
 <div class="container calendar">
 
+		<?php /* public_submission_form(true); */ ?>
+
 		<?php
 		/* ************************************************************************************************* */
 		/* THIS WEEK */
