@@ -3,6 +3,11 @@
 define('THEME_ROOT',				get_bloginfo('stylesheet_directory'));
 
 
+function get_calendar_date_scrubbed( $datestr ) {
+	$retval = str_replace('.', '/', $datestr);
+	return $retval;
+}
+
 /** get calendar selector from cookie */
 function get_calendar_from_cookie() {
 	if( $_COOKIE['whichcalendar'] === 'uk') {
@@ -21,7 +26,19 @@ function get_city_name_from_cookie() {
 	}
 }
 
+/* parse a list of tag objects and return an array of strings */
+function get_tags_as_array( $tags ) {
+	$retval = array();
+	foreach($tags as $t) {
+		array_push($retval, $t->name);
+	}
+	
+	return $retval;
+}
 
+function remove_functional_tags($tags, $to_remove = array('featured', 'reviewed', 'london', 'amsterdam') ) {
+	return array_diff($tags, $to_remove);
+}
 
 /**
  * Get other posts by same author excluding the current post
