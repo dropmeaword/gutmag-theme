@@ -2,7 +2,6 @@
 
 define('THEME_ROOT',				get_bloginfo('stylesheet_directory'));
 
-
 function get_calendar_date_scrubbed( $datestr ) {
 	$retval = str_replace('.', '/', $datestr);
 	return $retval;
@@ -26,7 +25,7 @@ function get_city_name_from_cookie() {
 	}
 }
 
-/* parse a list of tag objects and return an array of strings */
+/** parse a list of tag objects and return an array of strings */
 function get_tags_as_array( $tags ) {
 	$retval = array();
 	foreach($tags as $t) {
@@ -35,6 +34,14 @@ function get_tags_as_array( $tags ) {
 	
 	return $retval;
 }
+
+/** get label for event */
+function get_calendar_event_label( $tags ) {
+	$tags = get_tags_as_array( $tags );
+	$tags = remove_functional_tags( $tags );
+	return $tags[0];
+}
+
 
 function remove_functional_tags($tags, $to_remove = array('featured', 'reviewed', 'london', 'amsterdam') ) {
 	return array_diff($tags, $to_remove);

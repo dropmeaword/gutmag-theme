@@ -77,10 +77,7 @@ get_header();
 						}
 						
 						// get the label
-						$tags = get_the_tags();
-						$tags = get_tags_as_array( $tags );
-						$tags = remove_functional_tags( $tags );
-						$label = $tags[0];
+						$label = get_calendar_event_label( get_the_tags() );
 
 						if( has_post_thumbnail() ):
 							?><div class="eventArea withImage">
@@ -138,11 +135,9 @@ get_header();
 						setup_postdata( $post );
 						$begins = get_calendar_date_scrubbed( get('agenda_begins') );
 						$ends = get_calendar_date_scrubbed( get('agenda_ends') );
+
 						// get the label
-						$tags = get_the_tags();
-						$tags = get_tags_as_array( $tags );
-						$tags = remove_functional_tags( $tags );
-						$label = $tags[0];
+						$label = get_calendar_event_label( get_the_tags() );
 
 						if( has_post_thumbnail() ):
 							?><div class="eventArea withImage">

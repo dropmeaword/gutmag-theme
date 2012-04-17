@@ -1,15 +1,4 @@
 <?php
-function get_label_tag( $tags ) {
-	$retval = array();
-	foreach($tags as $t) {
-		if($t->name != 'featured') {
-			array_push( $retval, $t->name );
-		}
-	}
-	
-	return $retval;
-}
-
 global $wpdb;
 
 switch( $filter ):
@@ -51,11 +40,10 @@ if( $calendarPosts ):
 						$separator= "";
 					}
 					
-					$tags = get_the_tags();
-					$label = get_label_tag( $tags );
+					$label = get_calendar_event_label( get_the_tags() );
 	?>
 				<dl style="margin: 0.90em 0 0 0;">
-					<dt class="agendaListing" style="margin-bottom: 0.30em;"><span style="font-weight: bold; padding: 0.12em 1em 0.12em 0;"><!--&#9758;-->&#9826;&nbsp;<?= $label[0] ?></span></dt>
+					<dt class="agendaListing" style="margin-bottom: 0.30em;"><span style="font-weight: bold; padding: 0.12em 1em 0.12em 0;"><!--&#9758;-->&#9826;&nbsp;<?= $label ?></span></dt>
 					<dt class="agendaDate"><? echo $begins.$separator.$ends;  ?></dt>
 					<dt><a class="agendaTitle" href="<?php the_permalink() ?>"><?php the_title(); ?></a></dt>
 					<dt class="agendaVenue"><?php echo get('venue_name'); echo', '; echo get('venue_address') ?></dt>
