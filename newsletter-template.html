@@ -20,7 +20,7 @@
 			margin:0; 
 			padding:0; 
 			background: url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/images/raster.png') repeat; 
-			font: 1em/1.35em "AkzidenzGroteskBQLightRegular";
+			font: 1em/1.25em "Helvetica Neue", Arial, Helvetica, sans-serif;
 		}
 		
 		img {
@@ -38,8 +38,8 @@
 
 		.headercontainer {
 			width: 600px;
-	    margin: 0 auto;
-	    margin-right: auto;
+	    	margin: 0 auto;
+	    	margin-right: auto;
 			margin-left: auto;
 			margin-bottom: 0;
 			padding-top: 1px;
@@ -52,19 +52,20 @@
 			left: 50px;
 			width: 260px;
 			padding: 0 4px 0 4px;
-			font: 0.8em "AkzidenzGroteskBQRegular";
+			font: 0.8em;
 		}
 		
 		.logo {
+			padding-top: 27px;
 			position: absolute;
 			top: 80px;
-			left: 360px;
+			left: 385px;
 		}
 
 		.container{
 			position: relative;
 			left: 0px;
-			top: 160px;
+			top: 130px;
 			margin-left: 0;
 			/*border: 1px solid black;*/
 			margin-right: auto;
@@ -85,117 +86,65 @@
 		}
 		
 		.condensed {
-			font: 0.75em/1.1em "HelveticaLTStdCondensed";
+			font-size: 0.75em;
+			line-height: 1.1em;
 		}
 		
 		h2 {
-			font: normal 30px/1.1em "MagnusEFRegular";
+			font: normal 30px/1.25em ;
 			text-transform: uppercase;
 			color: black;
 		}
+		h3 {
+			float: left;
+			margin-top: 0;
+			width: 170px;
+			text-transform: uppercase;
+			font-weight: normal;	
+		}
+		p {
+			margin-top: 0;
+		}
 		
+		.column {
+			margin-left: 185px;
+		}
+		
+		.columnLogo {
+			margin-left: 330px;
+			text-align: justify;
+				
+		}
+		.line {
+			border-bottom: 1px dotted;
+			border-color: #000000; 
+			width: 600px;
+		}		
 		.twoEvents {
 			margin-top: 20px;
 		}
 		.eventMeta dl {
-			font: 0.75em/1.1em "HelveticaLTStdCondensed";
+			font-size: 0.9em;
+			line-height: 1.1em;
 			padding-bottom: 0.3em;
 			padding-top: 0.1em;
 		}
 				
 		.agendaDateBig {
 			padding-top: 0;
-			font: 2.2em/1em "AkzidenzGroteskBQLightRegular";
+			font-size: 2.2em;
+			line-height: 1em;
+			padding-bottom: 0.2em;
 		}
 		
 		.agendaTitle {
 			text-transform: uppercase;
-			font: 1.12em/1.1em "AkzidenzGroteskBQBold";
+			font-weight: bold;
+			
 		}
 		/* Template Styles */
 
 		/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: COMMON PAGE ELEMENTS /\/\/\/\/\/\/\/\/\/\ */
-
-		/* /\/\/\/\/\/\/\/\/\/\ FONT STYLING: FONT DEFINITIONS /\/\/\/\/\/\/\/\/\/\ */
-		/* @group fonts */
-
-		@font-face {
-		    font-family: 'AkzidenzGroteskBQMedium';
-		    src: url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/akzidenzgrotesk-medium-webfont.eot');
-		    src: url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/akzidenzgrotesk-medium-webfont.eot?#iefix') format('embedded-opentype'),
-		         url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/akzidenzgrotesk-medium-webfont.woff') format('woff'),
-		         url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/akzidenzgrotesk-medium-webfont.ttf') format('truetype'),
-		         url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/akzidenzgrotesk-medium-webfont.svg#AkzidenzGroteskBQMedium') format('svg');
-		    font-weight: normal;
-		    font-style: normal;
-		}
-
-		@font-face {
-		    font-family: 'AkzidenzGroteskBQBold';
-		    src: url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/akzidenzgrotesk-bold-webfont.eot');
-		    src: url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/akzidenzgrotesk-bold-webfont.eot?#iefix') format('embedded-opentype'),
-		         url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/akzidenzgrotesk-bold-webfont.woff') format('woff'),
-		         url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/akzidenzgrotesk-bold-webfont.ttf') format('truetype'),
-		         url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/akzidenzgrotesk-bold-webfont.svg#AkzidenzGroteskBQBold') format('svg');
-		    font-weight: normal;
-		    font-style: normal;
-		}
-
-		@font-face {
-		    font-family: 'HelveticaLTStdCondensed';
-		    src: url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/helveticaltstd-cond-webfont.eot');
-		    src: url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/helveticaltstd-cond-webfont.eot?#iefix') format('embedded-opentype'),
-		         url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/helveticaltstd-cond-webfont.woff') format('woff'),
-		         url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/helveticaltstd-cond-webfont.ttf') format('truetype'),
-		         url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/helveticaltstd-cond-webfont.svg#HelveticaLTStdCondensed') format('svg');
-		    font-weight: normal;
-		    font-style: normal;
-		}
-
-		@font-face {
-		    font-family: 'HelveticaNeueLTStd75Bold';
-		    src: url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/helveticaneueltstd-bd-webfont.eot');
-		    src: url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/helveticaneueltstd-bd-webfont.eot?#iefix') format('embedded-opentype'),
-		         url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/helveticaneueltstd-bd-webfont.woff') format('woff'),
-		         url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/helveticaneueltstd-bd-webfont.ttf') format('truetype'),
-		         url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/helveticaneueltstd-bd-webfont.svg#HelveticaNeueLTStd75Bold') format('svg');
-		    font-weight: normal;
-		    font-style: normal;
-		}
-
-		@font-face {
-		    font-family: 'AkzidenzGroteskBQLightRegular';
-		    src: url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/akzidenzgrotesk-light-webfont.eot');
-		    src: url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/akzidenzgrotesk-light-webfont.eot?#iefix') format('embedded-opentype'),
-		         url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/akzidenzgrotesk-light-webfont.woff') format('woff'),
-		         url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/akzidenzgrotesk-light-webfont.ttf') format('truetype'),
-		         url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/akzidenzgrotesk-light-webfont.svg#AkzidenzGroteskBQLightRegular') format('svg');
-		    font-weight: normal;
-		    font-style: normal;
-		}
-
-		@font-face {
-		    font-family: 'AkzidenzGroteskBQRegular';
-		    src: url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/akzidenzgrotesk-regular-webfont.eot');
-		    src: url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/akzidenzgrotesk-regular-webfont.eot?#iefix') format('embedded-opentype'),
-		         url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/akzidenzgrotesk-regular-webfont.woff') format('woff'),
-		         url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/akzidenzgrotesk-regular-webfont.ttf') format('truetype'),
-		         url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/akzidenzgrotesk-regular-webfont.svg#AkzidenzGroteskBQRegular') format('svg');
-		    font-weight: normal;
-		    font-style: normal;
-		}
-
-		@font-face {
-		    font-family: 'MagnusEFRegular';
-		    src: url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/magnusef-webfont.eot');
-		    src: url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/magnusef-webfont.eot?#iefix') format('embedded-opentype'),
-		         url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/magnusef-webfont.woff') format('woff'),
-		         url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/magnusef-webfont.ttf') format('truetype'),
-		         url('http://www.gutmag.eu/wp-content/themes/gutmag-theme/fonts/magnusef-webfont.svg#') format('svg');
-		    font-weight: normal;
-		    font-style: normal;
-		}
-		/* @end */
 
 		/* float clearing for IE6 */
 		* html .clearfix{
@@ -233,73 +182,106 @@
 			<div class="container clearfix">
 				<div class="main-features" mc:edit="std_content00">
 					<div mc:edit="std_preheader_links">
-						<p class="condensed">Hello *|FNAME|*, you are receiving this email because a while ago you subscribed to the GUTMAG newsletter. Keep reading to see what we have in store for you in this issue.</p>
+						<p class="condensed columnLogo">Hello *|FNAME|*, you are receiving this email because a while ago you subscribed to the GUTMAG newsletter. Keep reading to see what we have in store for you in this issue.</p>
 
-						<p class="condensed">Remember that you can <a href="#">stalk us on facebook too</a>.</p>
+						<p class="condensed columnLogo">Remember that you can <a href="#">stalk us on facebook too</a>.</p>
 					</div>
-
+				</br></br><div class="line"></div>
+				
 				<h2>London</h2>
-				<h3>The Mews</h3>
-				<p>Sabina M&uuml;ller gets us started on her series about the ins and outs of artists-run spaces in London. This time she visits Carlos Noronha Feio and Mikael Larsson at The Mews.</p>
-				<img src="http://www.gutmag.eu/wp-content/uploads/2012/03/P1010178-575x431.jpg" class="" />
-				<p><a href="#">Go to main article &#0187;</a></p>
+				
+				<div class="line"></div></br>
+				
+				<img src="http://www.gutmag.eu/wp-content/uploads/2012/03/P1010178-575x431.jpg" width="600px" class="" /></br></br>
+				<h3 <a href="#">The Mews</a></h3>
+				<p class="column">Sabina M&uuml;ller gets us started on her series about the ins and outs of artists-run spaces in London. This time she visits Carlos Noronha Feio and Mikael Larsson at The Mews. Sabina M&uuml;ller gets us started on her series about the ins and outs of artists-run spaces in London. This time she visits Carlos Noronha Feio and Mikael Larsson at The Mews.<br><span class="condensed"></p>
+				<p class="condensed column"><a href="#">Go to main article &#0187;</a></p>
+				
+				</br><div class="line"></div></br>
 			
 				<h3>Sightings</h3>
-				<p>Dorine van Meel catches you on video while you are looking at art, then disects you frame by frame.</p>
-				<p><a href="#">Go to main article &#0187;</a></p>
+				<p class="column">Dorine van Meel catches you on video while you are looking at art, then disects you frame by frame.</p>
+				<p class="condensed column"><a href="#">Go to main article &#0187;</a></p>
+				
+				</br><div class="line"></div></br>
 
+				<img src="http://www.gutmag.eu/wp-content/uploads/2012/03/P1010178-575x431.jpg" width="600px" class="" /></br></br>
 				<h3>Beyond the Spotlight</h3>
-				<img src="http://www.gutmag.eu/wp-content/uploads/2012/03/P1010178-575x431.jpg" class="" />
-				<p>Boukje Cnossen and Ana Escobar portray the unsung heroes that build London's <em>artworld</em> with their bare hands.</p>
-				<p><a href="#">Go to main article &#0187;</a></p>
+				<p class="column">Boukje Cnossen and Ana Escobar portray the unsung heroes that build London's <em>artworld</em> with their bare hands.</p>
+				<p class="condensed column"><a href="#">Go to main article &#0187;</a></p>
+
+				</br><div class="line"></div>
 
 				<h2>Amsterdam</h2>
-				<h3>University of Stuff</h3>
-				<p>Luis Rodil-Fernandez pays a visit to <em>De Spullenmannen</em> and tells us why Amsterdam has much to learn from this theatre group based in Amersfoort.</p>
-				<img src="http://www.gutmag.eu/wp-content/uploads/2012/03/P1010178-575x431.jpg" class="" />
-				<p><a href="#">Go to main article &#0187;</a></p>
-			
-				<h3>Review of Jeffrey B's "Cinema"</h3>
-				<p>A book release with a local taste, for the followers of Jeffrey's alternative film screenings.</p>
-				<img src="http://www.gutmag.eu/wp-content/uploads/2012/03/P1010178-575x431.jpg" class="" />
-				<p><a href="#">Go to main article &#0187;</a></p>
-			
-				<h2>Tactical Sleep</h2>
-				<p>Eugene Georg contributes with a rousing pamphlet on sleep as a revolutionary strategy, in which we learn of the evils of coffee machines and DJs that keep us awake at night.</p>
-				<p><a href="#">Go to main article &#0187;</a></p>
-
-				<h2>A Pretty Weird Bunch</h2>
-				<p>Daniel de Zeeuw puts <em>Anonymous</em> and <em>The Crying Lot of 49</em> side by side.</p>
-				<p><a href="#">Go to main article &#0187;</a></p>
-
-				<h2>The sublime hotness of Michael Fassbender</h2>
-				<p>Edwina Atlee delights us with this piece revealing the gossip in London's ladies rooms.</p>
-				<p><a href="#">Go to main article &#0187;</a></p>
-
-				<h2>Bad Art &amp; Bad Science</h2>
-				<p>Two poems by Cecilia Disnon.</p>
-				<p><a href="#">Go to main article &#0187;</a></p>
-
-				<h2>Romance in times of Social Media</h2>
-				<p>Boukje Cnossen shares a story about an incipient romance that finds itself bound by Facebook.</p>
-				<p><a href="#">Go to main article &#0187;</a></p>
-
-				<h2>Rescued Text</h2>
-				<p>This time we rescue Beethoven's <em>Heiligenstadt Testament</em> and tell you why we think it is an important text.</p>
-				<p><a href="#">Go to main article &#0187;</a></p>
-
-				<h2>PLUS SOME EXTRAS...</h2>
-				<p>Every month we hand-pick interesting events in both London and Amsterdam that hightlight the cultural life of these cities. Wherther these are concerts, lectures, exhibitions screenings or workshops we will pick them out for you and select the good stuff. Bookmark the calendar of events for your city so that you don't miss out.</p>
 				
+				<div class="line"></div></br>
+				
+				<img src="http://www.gutmag.eu/wp-content/uploads/2012/03/P1010178-575x431.jpg" width="600px" class="" /></br></br>
+				<h3>University of Stuff</h3>
+				<p class="column">Luis Rodil-Fernandez pays a visit to <em>De Spullenmannen</em> and tells us why Amsterdam has much to learn from this theatre group based in Amersfoort.</p>
+				<p class="condensed column"><a href="#">Go to main article &#0187;</a></p>
+			
+				</br><div class="line"></div></br>
+				
+				<img src="http://www.gutmag.eu/wp-content/uploads/2012/03/P1010178-575x431.jpg" width="600px" class=""/></br></br>
+				<h3>Review of Jeffrey B's "Cinema"</h3>
+				<p class="column">A book release with a local taste, for the followers of Jeffrey's alternative film screenings.</p>
+				<p class="condensed column"><a href="#">Go to main article &#0187;</a></p>
+				
+				</br><div class="line"></div>
+
+				<h2>And also...</h2>
+				
+				<div class="line"></div></br>
+			
+				<h3>Tactical Sleep</h3>
+				<p class="column">Eugene Georg contributes with a rousing pamphlet on sleep as a revolutionary strategy, in which we learn of the evils of coffee machines and DJs that keep us awake at night.</p>
+				<p class="condensed column"><a href="#">Go to main article &#0187;</a></p>
+
+				</br><div class="line"></div></br>
+				
+				<h3>A Pretty Weird Bunch</h3>
+				<p class="column">Daniel de Zeeuw puts <em>Anonymous</em> and <em>The Crying Lot of 49</em> side by side.</p>
+				<p class="condensed column"><a href="#">Go to main article &#0187;</a></p>
+
+				</br><div class="line"></div></br>
+
+				<h3>The sublime hotness of Michael Fassbender</h3>
+				<p class="column">Edwina Atlee delights us with this piece revealing the gossip in London's ladies rooms.</p>
+				<p class="condensed column"><a href="#">Go to main article &#0187;</a></p>
+
+				</br><div class="line"></div></br>
+
+				<h3>Bad Art &amp; Bad Science</h3>
+				<p class="column">Two poems by Cecilia Disnon.</p>
+				<p class="condensed column"><a href="#">Go to main article &#0187;</a></p>
+
+				</br><div class="line"></div></br>
+				
+				<h3>Romance in times of Social Media</h3>
+				<p class="column">Boukje Cnossen shares a story about an incipient romance that finds itself bound by Facebook.</p>
+				<p class="condensed column"><a href="#">Go to main article &#0187;</a></p>
+
+				</br><div class="line"></div></br>
+				
+				<h3>Rescued Text</h3>
+				<p class="column">This time we rescue Beethoven's <em>Heiligenstadt Testament</em> and tell you why we think it is an important text.</p>
+				<p class="condensed column"><a href="#">Go to main article &#0187;</a></p>
+
+				</br><div class="line"></div></br>
+				
+				<h3>PLUS SOME EXTRAS...</h3>
+				<p class="column">Every month we hand-pick interesting events in both London and Amsterdam that hightlight the cultural life of these cities. Wherther these are concerts, lectures, exhibitions screenings or workshops we will pick them out for you and select the good stuff. Bookmark the calendar of events for your city so that you don't miss out.</p>
+				</br><div class="line"></div>
 				<table class="twoEvents">
 					<tr>
 						<td style="width: 270px;">
-							<p><a href="#">See more events in Amsterdam &#0187;</a></p>
+							<p class="condensed"><a href="#">See more events in Amsterdam &#0187;</a></p>
 							<div class="eventArea">
 										<a class="gallery_eventpage" href="#"><img width="270" height="170" src="http://www.gutmag.eu/wp-content/uploads/2012/04/petit-a-270x170.jpg" alt="petit a" title="petit a" style="display: inline; "></a>
 												<div class="eventMeta">
 												<dl>
-												<dt class="agendaDateBig">15.04.2012 <br> 20.04.2012</dt>
+												<dt class="agendaDateBig">15/04/2012</dt>
 												<dt class="agendaTitle">FLAM III – Forum of Live Art Amsterdam</dt>
 												<dt>Arti et Amicitae, Rokin 112</dt>
 												<dt>Free admission</dt>
@@ -310,12 +292,12 @@
 						</td>
 						<td style="width: 60px;"></td>
 						<td style="width: 270px; vertical-align: top;">
-							<p><a href="#">See more events in London &#0187;</a></p>
+							<p class="condensed"><a href="#">See more events in London &#0187;</a></p>
 							<div class="eventArea">
 										<a class="gallery_eventpage" href="#"><img width="270" height="170" src="http://www.gutmag.eu/wp-content/uploads/2012/04/moss-2011-270x170.jpg" class="attachment-calendar-thumbnail wp-post-image" alt="petit a" title="petit a" style="display: inline; "></a>
 												<div class="eventMeta">
 													<dl>
-													<dt class="agendaDateBig">15.04.2012</dt>
+													<dt class="agendaDateBig">15/04/2012</dt>
 													<dt class="agendaTitle">Moss</dt>
 													<dt>Hoxton, Hoxton Square EC1</dt>
 													<dt>&pound;12</dt>
@@ -326,7 +308,9 @@
 						</td>
 					</tr>
 				</table>
-
+				
+				<div class="line"></div>
+				
 				<h2>CALL FOR CONTRIBUTORS</h2>
 				<p>GUTMAG is an online magazine focusing on creative culture in the broadest sense. We 
 				approach our topics with an open mind and a sharp pen. Whether you want to write on the 
@@ -337,7 +321,8 @@
 				<p>We are looking for writers, photographers and illustrators that would like to contribute to make GUTMAG a cultural magazine to look out for. If you think you have what it takes please submit some samples of your work to <a href="mailto:hello@gutmag.eu">hello@gutmag.eu</a>.</p>
 			
 				<!-- <br/><br/><br/> -->
-			
+				<div class="line"></div>
+				
 				<h2>THANK YOU!</h2>
 				<p>Every publication is a collective endeavor and we are no different. We would like to thank Daniel de Zeeuw, Michiel Hilbrink, Edwina Atlee, Eugene Georg, Sabina M&uuml;ller, Ana Escobar, Dorine van Meel, Laura Schneider, Kerstin Heyen and Cecilia Disnon. For their contributions and for putting up with numerous reviews.</p>
 				
