@@ -17,7 +17,7 @@ $calendarPosts = $wpdb->get_results($q, OBJECT);
 ?>
 
 <section class="agendaArea">
-    <h1 class="sidebarHeader"><a href="/calendar">Coming Up</a></h1>
+    <h1 class="sidebarHeader"><a href="/calendar">Event listings</a></h1>
 		<div id="citySelector">
 			<ul class="tabSelector"><li id="nl" class="calendarSwitch">AMSTERDAM</li><li>X</li><li id="uk" class="calendarSwitch">LONDON</li></ul>
 		</div>
@@ -42,13 +42,13 @@ if( $calendarPosts ):
 					
 					$label = get_calendar_event_label( get_the_tags() );
 	?>
-				<dl style="margin: 0.90em 0 0 0;">
-					<dt class="agendaListing" style="margin-bottom: 0.30em;"><span style="font-weight: bold; padding: 0.12em 1em 0.12em 0;"><!--&#9758;-->&#9826;&nbsp;<?= $label ?></span></dt>
+				<dl class="agendaItem">
+					<dt class="agendaListing"><span class="label"><?= $label ?></span></dt>
 					<dt class="agendaDate"><? echo $begins.$separator.$ends;  ?></dt>
-					<dt><a class="agendaTitle" href="<?php the_permalink() ?>"><?php the_title(); ?></a></dt>
-					<dt class="agendaVenue"><?php echo get('venue_name'); echo', '; echo get('venue_address') ?></dt>
-					<dt class="agendaVenue"><?php echo get('venue_price'); ?></dt>
-					<dt class="agendaExc""><?php echo preg_replace('/<p>(.+?)<\/p>/','$1',get_the_excerpt()); ?></dt>
+					<dt class="agendaTitle agendaFrontPage"><?php the_title(); ?></dt>
+					<dt><?php echo get('venue_name'); echo', '; echo get('venue_address') ?></dt>
+					<dt><?php echo get('venue_price'); ?></dt>
+					<dt><?php echo preg_replace('/<p>(.+?)<\/p>/','$1',get_the_excerpt()); ?></dt>
 				</dl>
 	<?php 
 				endif;
@@ -60,6 +60,10 @@ else:
 <?
 endif;
 ?>
+
+			<!--<br/>
+			<a href="/calendar">See full event listings &#0187;</a> -->
+			
 	    </div>
 	</section>
 <!-- lf: end: list agenda event -->	<!-- lf end: this is the agenda section  -->

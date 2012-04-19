@@ -623,10 +623,22 @@ dl.articlesAuthorArea dt {
 }
 
 .agendaExc {
-	font: italic 0.7em/1.1em AkzidenzGroteskBQRegular;
+	font: italic 0.7em/1.1em "AkzidenzGroteskBQRegular";
 	padding-bottom: 1em;	
 	padding-top: 0.2em;
+}
 
+.agendaItem {
+	font-size: 14pt;
+	margin: 0.90em 0 0 0;
+}
+
+.agendaFrontPage {
+	font-size: 10pt !important;
+}
+
+dl.agendaItem dt {
+	font: 0.75em/1.1em 'HelveticaLTStdCondensed';
 }
 
 div.itemsocial ul li{
