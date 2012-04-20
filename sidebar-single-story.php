@@ -12,6 +12,12 @@
 	<? include('templates/social-share-buttons.php'); ?>
 
 	<div class="line">&nbsp;</div>
+	<div class="sidebarAuthorBio">
+		<h2>About <?php get_the_author_meta('display_name'); ?></h2>
+		<?php get_the_author_meta('description'); ?>
+	</div>
+
+	<div class="line">&nbsp;</div>
 	<span class='commentSidebar'>more from this author:</span>
 	<?php
 		$authorId = get_the_author_meta('ID');
