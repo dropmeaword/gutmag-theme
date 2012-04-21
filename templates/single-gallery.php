@@ -9,7 +9,8 @@ jQuery(document).ready(function() {
 });
 </script>
 
-<div class="container">  
+<div class="container">
+ 	<h3><?= the_title() ?> by <?php the_author_posts_link(); ?></h3>
 <!--	<div id="content">-->
 	<a id="galleryScrollPoint"></a>
 	<div id="sliderControllergallery">

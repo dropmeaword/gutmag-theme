@@ -24,7 +24,7 @@
 						<h2 class="post-title" ><?php the_title(); ?></h2>
 						<dl class="post_info">
 							<dt class="agendaDate" style="margin-bottom: 8px;"><?php the_date('d.m.Y'); ?></dt>
-							<dt class="authorName" >by <?php the_author(); ?></dt>
+							<dt class="authorName" >by <?php the_author_posts_link(); ?></dt>
 						</dl>
 					</div><!--END POST TITLE-->
 					
