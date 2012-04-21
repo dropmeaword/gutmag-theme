@@ -7,5 +7,5 @@ function getTinyUrl($url) {
 <div class="social-single">
 <a href="http://www.addthis.com/bookmark.php"
         style="text-decoration:none;"
-        class="addthis_button">Bookmark or Share</a>
+        class="addthis_button"><img src="<?php bloginfo('template_url'); ?>/images/share-diaspora-logo.jpg"/></a>
 </div>
