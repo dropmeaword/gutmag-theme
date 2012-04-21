@@ -18,6 +18,22 @@ Current Theme Options in the Wordpress dashboard. They
 can be overridden by the child theme.
 */
 
+pre.poem {
+	display: block;
+	background: #FAFAFA;
+	padding: 3.5em 1em 2em 2.5em;
+	margin: 2em 0 2em 0;
+	border: 1px solid grey;
+	width: 485px;
+	height: 650px;
+	font: 14pt/1.5em Georgia, san-serif;
+}
+
+div.blurb {
+	font-style: italic;
+	margin-bottom: 4em;
+}
+
 /* @begin issue listings */
 .issuesSidebar dd {
 	font-size: 0.75em;
@@ -42,7 +58,7 @@ li.widget {
 dl.posts-by-tag-list {
 	font-size: 0.9em;
 	margin: 0.30em 0 0 6px !important;
-	line-height: 10px !important;
+	line-height: 1.1em !important;
 }
 
 dl.posts-by-tag-list dt {
@@ -51,6 +67,11 @@ dl.posts-by-tag-list dt {
 
 dl.posts-by-tag-item dd {
 	font: 0.8em/1.2em "AkzidenzGroteskBQLightRegular";
+}
+
+dd.articleAuthor {
+	margin: 0 !important;
+	padding: 0 !important;
 }
 
 /* @end issue listings */
@@ -258,6 +279,14 @@ only screen and (min-device-width: 768px) and (max-device-width: 1024px)
 	padding: 0 !important;
 }
 
+.sidebarAuthorBio {
+	margin: 3em 0 1em 0;
+	font: 0.75em/1.1em 'HelveticaLTStdCondensed';
+}
+
+.sidebarAuthorBio span {
+	font-size: 9pt !important;
+}
 
 div.relatedPostsArea {
 	margin-top: 0.25em;
@@ -651,7 +680,7 @@ div.itemsocial {
 }
 
 div.social-single {
-	margin: 3em 0 0 0;
+	margin: 1.8em 0 1em 0;
 }
 
 .addthis_button {
