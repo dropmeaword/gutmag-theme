@@ -1,5 +1,5 @@
 <section class="agendaArea">
-    <h1 class="sidebarHeader"><a href="/calendar">Coming Up</a></h1>
+    <h1 class="sidebarHeader"><span class="arrow">&rarr;</span><a href="/calendar">Coming Up</a></h1>
 		<div id="citySelector">
 			<ul class="tabSelector"><li id="nl" class="calendarSwitch">AMSTERDAM</li><li>X</li><li id="uk" class="calendarSwitch">LONDON</li></ul>
 		</div>

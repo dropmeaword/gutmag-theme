@@ -9,7 +9,9 @@ jQuery(document).ready(function() {
 });
 </script>
 
-<div class="container">  
+<div class="container"> 
+	<h2><a class="post-title-img post-title smalltype"><?php the_title(); ?></a></h2>
+	 
 <!--	<div id="content">-->
 	<a id="galleryScrollPoint"></a>
 	<div id="sliderControllergallery">

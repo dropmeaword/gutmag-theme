@@ -25,7 +25,7 @@
 						<!-- <div class="line">&nbsp;</div> -->
 						<dl class="post_info">
 							<!-- <dt class="agendaListing" style="margin-bottom: 0.85em;"><? the_tags('', '&nbsp;', ''); ?></dt> -->
-							<dt class="agendaDate" style="margin-bottom: 8px;"><?php the_date('d.m.Y'); ?></dt>
+							<dt class="agendaDate" style="margin-bottom: 3px;"><?php the_date('d/m/Y'); ?></dt>
 							<dt class="authorName" >by <?php the_author(); ?></dt>
 						</dl>
 						<!-- <div class="item social"><? include('templates/social-buttons.php'); ?></div> -->
@@ -34,8 +34,6 @@
 					
 					<?php the_content(); ?>  
 
-					<div class="line">&nbsp;</div>
-					<div class="space"></div>
 				</div> <!-- #post-id -->
 				
 				

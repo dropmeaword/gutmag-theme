@@ -14,7 +14,7 @@
   ?>
 	
 	<!-- <div class="line">&nbsp;</div> -->
-	<br/><br/>
+	
 
 	<? include('templates/social-home-buttons.php'); ?>
 	<!-- mh: menu widget 'right pane menu' in bottom of sidebar-->

@@ -38,7 +38,7 @@
 					
 					<?php the_content('read on'); ?>  
 
-					<div class="line">&nbsp;</div>
+					<!--<div class="line">&nbsp;</div>-->
 					<div class="space"></div>
 				</div> <!-- #post-id -->
 				
