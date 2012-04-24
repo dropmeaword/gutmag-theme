@@ -9,9 +9,14 @@ jQuery(document).ready(function() {
 });
 </script>
 
+<<<<<<< HEAD
 <div class="container"> 
 	<h2><a class="post-title-img post-title smalltype"><?php the_title(); ?></a></h2>
 	 
+=======
+<div class="container">
+ 	<h3><?= the_title() ?> by <?php the_author_posts_link(); ?></h3>
+>>>>>>> 8bb5b27b6d092e0788c0a238babc85569c0d452f
 <!--	<div id="content">-->
 	<a id="galleryScrollPoint"></a>
 	<div id="sliderControllergallery">

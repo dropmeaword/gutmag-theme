@@ -22,17 +22,20 @@
 					
 					<div class="title-area">
 						<h2 class="post-title" ><?php the_title(); ?></h2>
-						<!-- <div class="line">&nbsp;</div> -->
 						<dl class="post_info">
+<<<<<<< HEAD
 							<!-- <dt class="agendaListing" style="margin-bottom: 0.85em;"><? the_tags('', '&nbsp;', ''); ?></dt> -->
 							<dt class="agendaDate" style="margin-bottom: 3px;"><?php the_date('d/m/Y'); ?></dt>
 							<dt class="authorName" >by <?php the_author(); ?></dt>
+=======
+							<dt class="agendaDate" style="margin-bottom: 8px;"><?php the_date('d.m.Y'); ?></dt>
+							<dt class="authorName" >by <?php the_author_posts_link(); ?></dt>
+>>>>>>> 8bb5b27b6d092e0788c0a238babc85569c0d452f
 						</dl>
-						<!-- <div class="item social"><? include('templates/social-buttons.php'); ?></div> -->
 					</div><!--END POST TITLE-->
 					
 					
-					<?php the_content(); ?>  
+					<?php	the_content(); ?>  
 
 				</div> <!-- #post-id -->
 				

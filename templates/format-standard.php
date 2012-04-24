@@ -22,7 +22,19 @@
 	</div><!--END POST TITLE-->
 	
 	
-	<?php the_content('read on'); ?>  
+	<?php
+		$blurb = get_the_excerpt();
+		if(empty($blurb)) {
+			$blurb = get_the_content('continues &#0187;');
+			$blurb = apply_filters('the_content', $blurb);
+			$blurb = str_replace(']]>', ']]&gt;', $blurb);
+		} else {
+			$permalnk = get_permalink();
+			$blurb = $blurb." <a href='$permalnk' class='more-link'>continues &#0187;</a>";
+		}
+		
+		echo $blurb;
+	?>  
 
 	<!--<div class="line">&nbsp;</div>-->
 	<div class="space"></div>
