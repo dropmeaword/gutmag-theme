@@ -353,7 +353,7 @@ ul.related_post li {
 }
 
 h2.post-title {
-	font: normal 30px/1.1em 'MagnusEFRegular';
+	font: normal 30px/1em 'MagnusEFRegular';
 	color: black;
 	margin-top: 11px;
 }
@@ -688,7 +688,7 @@ div.itemsocial {
 }
 
 div.social-single {
-	margin: 1.8em 0 1em 0;
+	margin: 0 0 1em;
 }
 
 .addthis_button {
@@ -868,6 +868,10 @@ a {
 /* @end */
 .no-related-found {
 	font-size: 0.75em;
+}
+
+.relatedcontent {
+	margin: 1em 0 1em 0;
 }
 
 .line {

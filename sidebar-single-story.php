@@ -15,7 +15,9 @@
 		<p><?php the_author_meta('description'); ?></p>
 	</div>
 
-	<div class="relatedcontent" style="margin: 1em 0 1em 0;">
+	<div class="relatedcontent">
+		<div class="line">&nbsp;</div>
+		<span class='commentSidebar'>more from this author:</span>
 		<?php
 			$authorId = get_the_author_meta('ID');
 			//print_r($authorId);
