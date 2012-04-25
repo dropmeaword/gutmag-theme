@@ -866,6 +866,9 @@ a {
 
 
 /* @end */
+.no-related-found {
+	font-size: 0.75em;
+}
 
 .line {
 	width: 32px;

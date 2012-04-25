@@ -16,8 +16,6 @@
 	</div>
 
 	<div class="relatedcontent" style="margin: 1em 0 1em 0;">
-		<div class="line">&nbsp;</div>
-		<span class='commentSidebar'>more from this author:</span>
 		<?php
 			$authorId = get_the_author_meta('ID');
 			//print_r($authorId);
@@ -25,6 +23,8 @@
 			$morePosts = get_other_posts_by_author($authorId, $post->ID);
 			if( !empty($morePosts) ):
 		?>
+		<div class="line">&nbsp;</div>
+		<span class='commentSidebar'>more from this author:</span>
 		<dl class="articlesAuthorArea">
 		<?php
 			foreach( $morePosts as $otherPost ):
@@ -40,7 +40,7 @@
 		<div class="line">&nbsp;</div>
 
 		<div class="relatedPostsArea"> 
-		<?php do_action('erp-show-related-posts', array('title'=>'related contributions:', 'num_to_display'=>5, 'no_rp_text'=>'<em>No related contributions were found</em>')); ?>
+		<?php do_action('erp-show-related-posts', array('title'=>'related contributions:', 'num_to_display'=>5, 'no_rp_text'=>'<p class="no-related-found">No related contributions were found</p>')); ?>
 		</div>
 	</div>
 	
