@@ -10,7 +10,9 @@ jQuery(document).ready(function() {
 </script>
 
 <div class="container">
- 	<h3><?= the_title() ?> by <?php the_author_posts_link(); ?></h3>
+
+	<h2 class="post-title" style="display: inline;" ><?php the_title(); ?></h2> <span class="authorName"> by <?php the_author_posts_link(); ?></span>
+
 <!--	<div id="content">-->
 	<a id="galleryScrollPoint"></a>
 	<div id="sliderControllergallery">
