@@ -21,13 +21,14 @@ can be overridden by the child theme.
 pre.poem {
 	display: block;
 	background: #FAFAFA;
-	padding: 3.5em 1em 2em 2.5em;
+	padding: 3.5em 2em 2em 2.5em;
 	margin: 2em 0 2em 0;
 	border: 1px solid grey;
 	width: 485px;
 	height: 650px;
-	font: 14pt/1.5em Georgia, san-serif;
+	font: 13.5pt/1.6em Georgia, sans-serif;
 }
+
 
 div.blurb {
 	font-style: italic;
