@@ -189,7 +189,7 @@ body{
 }
 .header{
 	width: 575px;
-	padding-top: 12em;
+	padding-top: 12.65em;
 	float: left;
 	font: 0.8em AkzidenzGroteskBQRegular;
 }
@@ -465,7 +465,7 @@ input#searchsubmit{
 }
 
 .search {
-	padding-top: 0.7em;
+	padding-top: 0;
 	list-style-type: none;
 }
 
