@@ -108,6 +108,12 @@ http://wordpress.org/support/topic/post-image-4
 /* @lfernandez END attached media */
 
 /* @lfernandez BEGIN calendar functions */
+function get_query_week_calendar($now, $then, $which) {
+	$cond = "(CAST(starts.meta_value AS DATE) > '{$now}') AND	(CAST(starts.meta_value AS DATE)  < '{$then}')";
+	$orderby = "ORDER BY starts.meta_value ASC";
+	return get_query_calendar($which, $cond, $orderby);
+}
+
 function get_query_ongoing_calendar($now, $which) {
 	$cond = "(CAST(starts.meta_value AS DATE) < '{$now}') AND	(CAST(ends.meta_value AS DATE)  > '{$now}')";
 	$orderby = "ORDER BY ends.meta_value ASC";

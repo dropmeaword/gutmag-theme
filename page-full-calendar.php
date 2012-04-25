@@ -20,9 +20,12 @@ function get_calendar_string($begins, $ends) {
 }
 
 function get_events_week_calendar( $which ) {
-	$now = date("Y-m-d", strtotime("last monday"));
-	$then = date("Y-m-d", strtotime("next sunday"));
-	return get_query_delimited_calendar($now, $then, $which);
+	// $now = date("Y-m-d", strtotime("last monday"));
+	// $then = date("Y-m-d", strtotime("next sunday"));
+	//return get_query_delimited_calendar($now, $then, $which);
+	$now = date("Y-m-d");
+	$then = date("Y-m-d", strtotime("+1 week"));
+	return get_query_week_calendar($now, $then, $which);
 }
 
 function get_events_upcoming_calendar( $which ) {
