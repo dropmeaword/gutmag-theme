@@ -78,11 +78,11 @@ dd.articleAuthor {
 
 /* @lfernandez: begin city selector */
 #citySelector {
-	margin: 8px 0 20px;
+	margin: 12px 0 12px 0;
 }
 
 ul.tabSelector {
-	font: 0.75em/1.35em "HelveticaLTStdCondensed";
+	font: 0.75em/1.35em "AkzidenzGroteskBQLightRegular";
 	list-style: none;
 	/*display: inline;*/
 	/*padding: 12px 0 0 0;*/
@@ -189,7 +189,7 @@ body{
 }
 .header{
 	width: 575px;
-	padding-top: 12.5em;
+	padding-top: 12em;
 	float: left;
 	font: 0.8em AkzidenzGroteskBQRegular;
 }
@@ -264,7 +264,6 @@ only screen and (min-device-width: 768px) and (max-device-width: 1024px)
 .sidebarHeader {
 	font: 1.9em "MagnusEFRegular";
 	margin-bottom: 0;
-	text-transform: uppercase;
 }
 
 .articlesAuthorArea {
@@ -324,19 +323,15 @@ ul.related_post li {
 	margin-left: 0px;
 }
 
-.smalltype {
-	font-size: 16px !important;
-}
-
 .title-area-img {
 	margin-left: 0px;
 	position: absolute;
 	top: 12px;
 	left: 0px;
-	width: auto;
+	width: 197px;
 	/* background: white url('images/raster.png') repeat-x; */
 	background-color: white;
-	padding: 5px 10px 5px 0px;
+	padding: 5px 30px 16px 0px;
 	margin-top: -0.25em;
 }
 
@@ -359,22 +354,19 @@ ul.related_post li {
 	display: inline;
 }
 
-.post-title {
-	font: normal 24px/1.1em AkzidenzGroteskBQBold;
+h2.post-title {
+	font: normal 30px/1.1em 'MagnusEFRegular';
 	text-transform: uppercase;
 	color: black;
 }
 
-.post-title a {
+h2 a {
 	text-transform: uppercase;
 	color: black;
 	text-decoration: underline;
-	font: normal 24px/1.1em AkzidenzGroteskBQBold;
+	font: normal 30px/1.1em MagnusEFRegular;
 }
-.more-link {
-	font-style: italic;
-	font-size: 0.9em;
-}
+
 #content{	
 	font-weight: normal;
 	text-align: left;
@@ -385,7 +377,7 @@ ul.related_post li {
 }
 
 #content p{
-	margin: 0 0 2.0em;
+	margin:  0 0 2.0em 0;
 	padding:  0;
 	font: 1.0em/1.35em "AkzidenzGroteskBQLightRegular";
 }
@@ -473,6 +465,7 @@ input#searchsubmit{
 }
 
 .search {
+	padding-top: 0.7em;
 	list-style-type: none;
 }
 
@@ -500,12 +493,6 @@ color: black;
 /* @end */
 
 /* @group sidebar */
-
-.arrow {
-	font: bold 0.85em/0.8em AkzidenzGroteskBQBold;
-	margin-right: 3px;
-	margin-left: -2px;
-}
 
 .issues {
 	margin: 2.5em 0 0 0;
@@ -639,8 +626,12 @@ dl.articlesAuthorArea dt {
 }
 
 .label {
-	font: 0.75em/1.2em "HelveticaLTStdCondensed";
+	background-color: black;
+	font: 0.8em/1.2em "AkzidenzGroteskBQLightRegular";
+	color: white;
+	display: inline-block;
 	text-transform: uppercase;
+	padding: 2px 6px 2px 6px !important;
 }
 
 .agendaDate {
@@ -655,16 +646,10 @@ dl.articlesAuthorArea dt {
 	text-transform: uppercase !important;	
 	font: 0.8em/1.1em "AkzidenzGroteskBQBold" !important;
 }
-.agendaVenue {
-	font: 0.75em/1.1em 'AkzidenzGroteskBQRegular';
-}
+
 .agendaListing {
-	font: 0.75em/1.4em 'AkzidenzGroteskBQRegular';
-	border: 1px solid #000;
-	width: auto;
-	display: inline;
-	padding-left: 3px;
-	padding-right: 3px;
+	font: 0.75em/0.8em 'AkzidenzGroteskBQRegular' !important;
+	padding-bottom: 0.1em !important;
 }
 
 .agendaExc {
@@ -719,10 +704,8 @@ h1,h2,h3,h4,h5,h6,fieldset{
 h1{ /*font-size: ($WPFolio_headline_size)*/ }
 h1,h2,h3 { /*color: (WPFolio_highlight_color)*/ }
 h2 {
+	margin: 0;
 	padding: 0;
-	margin-bottom: 5px;
-	margin-right: 8px;
-	margin-top: 5px;
 }
 h3 {
 	font-size: 1.4em;
@@ -764,7 +747,7 @@ a {
 }
 
 .gallery_top {
-	padding-bottom: 1em;
+	padding-bottom: 2em;
 	position: relative;
 }
 

@@ -36,6 +36,6 @@
 		echo $blurb;
 	?>  
 
-	<!--<div class="line">&nbsp;</div>-->
+	<div class="line">&nbsp;</div>
 	<div class="space"></div>
 </div> <!-- #post-id -->

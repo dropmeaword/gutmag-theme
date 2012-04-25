@@ -17,11 +17,7 @@ $calendarPosts = $wpdb->get_results($q, OBJECT);
 ?>
 
 <section class="agendaArea">
-<<<<<<< HEAD
-    <h1 class="sidebarHeader"><span class="arrow">&rarr;</span><a href="/calendar">Coming Up</a></h1>
-=======
     <h1 class="sidebarHeader"><a href="/calendar">Event listings</a></h1>
->>>>>>> 8bb5b27b6d092e0788c0a238babc85569c0d452f
 		<div id="citySelector">
 			<ul class="tabSelector"><li id="nl" class="calendarSwitch">AMSTERDAM</li><li>X</li><li id="uk" class="calendarSwitch">LONDON</li></ul>
 		</div>
@@ -46,13 +42,8 @@ if( $calendarPosts ):
 					
 					$label = get_calendar_event_label( get_the_tags() );
 	?>
-<<<<<<< HEAD
-				<dl style="margin: 0.90em 0 0 0;">
-					<dt class="label"><span><?= $label ?></span></dt>
-=======
 				<dl class="agendaItem">
 					<dt class="agendaListing"><span class="label"><?= $label ?></span></dt>
->>>>>>> 8bb5b27b6d092e0788c0a238babc85569c0d452f
 					<dt class="agendaDate"><? echo $begins.$separator.$ends;  ?></dt>
 					<dt class="agendaTitle agendaFrontPage"><?php the_title(); ?></dt>
 					<dt><?php echo get('venue_name'); echo', '; echo get('venue_address') ?></dt>
