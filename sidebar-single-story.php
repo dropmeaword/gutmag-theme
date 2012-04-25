@@ -9,8 +9,6 @@
   <div id="scroller" style="width: 270px">
 	&uarr; <a class="back" href="<?php echo get_option('home'); ?>">back home</a> 
 
-	<? include('templates/social-share-buttons.php'); ?>
-
 	<!-- <div class="line">&nbsp;</div> -->
 	<div class="sidebarAuthorBio">
 		<span class="label">About <?php the_author_meta('display_name'); ?></span>
@@ -46,6 +44,7 @@
 		</div>
 	</div>
 	
+	<? include('templates/social-share-buttons.php'); ?>
 	
 	<div class='footerSidebar'><?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('Footer sidebar') ) ; ?> </div>
 	</div> <!-- /scroller -->
