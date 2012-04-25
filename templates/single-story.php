@@ -15,7 +15,10 @@
 						//$attachments = get_attachment($post->ID);
 						if( has_post_thumbnail() ):
 					?>
-					<div class="gallery_top"><?php the_post_thumbnail(); ?></div>
+					<div class="gallery_top">
+						<?php the_post_thumbnail(); ?>
+						<p class="wp-caption-text"><?php the_post_thumbnail_caption($post->ID); ?></p>
+					</div>
 					<?php
 						endif;
 					?>

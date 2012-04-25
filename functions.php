@@ -76,6 +76,26 @@ function get_custom_post_format($post_id) {
 
 /* @lfernandez BEGIN attached media */
 /**
+ * Get image caption
+ */
+function the_post_thumbnail_caption( $pid ) {
+  //global $post;
+	$retval = '';
+	
+  $thumbnail_id    = get_post_thumbnail_id($pid); //$post->ID);
+	$images = get_children(array(
+		'post_parent'    => $pid,
+		'post_type'      => 'attachment',
+		'numberposts'    => -1, // show all
+		'post_status'    => null,
+		'post_mime_type' => 'image',
+	));
+
+	$thumbnail = reset($images);
+	echo $thumbnail->post_excerpt;
+}
+
+/**
  * Get a list of all images attached to a post
  */
 function get_all_gallery_images($post_id) {
@@ -184,7 +204,7 @@ function custom_excerpt_length($length) {
 }
 
 /* @lfernandez: add support for post formats */
-add_theme_support( 'post-formats', array( 'gallery', 'standard' ) );
+add_theme_support( 'post-formats', array( 'gallery' ) );
 
 // Shortcode to add wide margins to a post page - works as is, but is applied in post lists
 function wide_margins_shortcode ($atts, $content = null) {
