@@ -118,13 +118,11 @@ margin-top: 2.5em;
 
 #teamMembers td h4 {
 	margin: 0;
-	font-weight: bold;
-	font-size: 0.90em;
+
 }
 
 p.subtext {
-color: grey;
-font-size: 0.85em !important;
+font-size: 0.8em !important;
 font-style: italic !important;
 margin: 0 0 1em 0 !important;
 padding: 0 !important;
@@ -328,10 +326,10 @@ ul.related_post li {
 	position: absolute;
 	top: 12px;
 	left: 0px;
-	width: 197px;
+	width: auto;
 	/* background: white url('images/raster.png') repeat-x; */
 	background-color: white;
-	padding: 5px 30px 16px 0px;
+	padding: 4px 10px 5px 0px;
 	margin-top: -0.25em;
 }
 
@@ -356,17 +354,27 @@ ul.related_post li {
 
 h2.post-title {
 	font: normal 30px/1.1em 'MagnusEFRegular';
-	text-transform: uppercase;
 	color: black;
+	margin-top: 11px;
 }
 
 h2 a {
-	text-transform: uppercase;
 	color: black;
 	text-decoration: underline;
-	font: normal 30px/1.1em MagnusEFRegular;
+	font: normal 30px/1em MagnusEFRegular;
 }
-
+.more-link:before {
+	content:" → ";
+	text-decoration: none;
+	vertical-align: -2px;
+	padding-left: 12px;
+}
+.more-link {
+	text-decoration: none;
+	vertical-align: 0px;
+}
+.more-link:hover {
+}
 #content{	
 	font-weight: normal;
 	text-align: left;
@@ -382,9 +390,8 @@ h2 a {
 	font: 1.0em/1.35em "AkzidenzGroteskBQLightRegular";
 }
 #content h3 {
-	font: 1em/1.25em "AkzidenzGroteskBQMedium";
 	padding: 0;
-	margin:  1.85em 0 .45em 0;
+	margin: 2.2em 0 0.5em;
 }
 
 /* @group event related styles */
@@ -747,7 +754,7 @@ a {
 }
 
 .gallery_top {
-	padding-bottom: 2em;
+	padding-bottom: 1.5em;
 	position: relative;
 }
 
@@ -863,8 +870,12 @@ a {
 .line {
 	width: 32px;
 	padding: 0;
-	border-bottom: 1px solid black;
+	border-bottom: 0px solid black;
 	margin: 0 0 4px;
+}
+
+.space {
+	padding-bottom: 3em;
 }
 
 .back {
@@ -909,10 +920,6 @@ margin: auto -135px;
 code{
 	color: gray;
 	font-family: "Courier New", Courier, mono;
-}
-
-.space {
-	padding-bottom: 2em;
 }
 
 .justify{

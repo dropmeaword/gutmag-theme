@@ -25,12 +25,12 @@
 	<?php
 		$blurb = get_the_excerpt();
 		if(empty($blurb)) {
-			$blurb = get_the_content('continues &#0187;');
+			$blurb = get_the_content('continues');
 			$blurb = apply_filters('the_content', $blurb);
 			$blurb = str_replace(']]>', ']]&gt;', $blurb);
 		} else {
 			$permalnk = get_permalink();
-			$blurb = $blurb." <a href='$permalnk' class='more-link'>continues &#0187;</a>";
+			$blurb = $blurb." <a href='$permalnk' class='more-link'>continues</a>";
 		}
 		
 		echo $blurb;
