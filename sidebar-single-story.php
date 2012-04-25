@@ -7,7 +7,7 @@
 <div id="sidebar">
 	<div id="scroller-anchor"></div> 
   <div id="scroller" style="width: 270px">
-	&uarr; <a class="back" href="<?php echo get_option('home'); ?>">back home</a> 
+	&uarr; <a class="back" href="<?php echo get_option('home'); ?>">back</a> 
 
 	<!-- <div class="line">&nbsp;</div> -->
 	<div class="sidebarAuthorBio">
