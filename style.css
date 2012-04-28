@@ -29,6 +29,12 @@ pre.poem {
 	font: 13.5pt/1.6em Georgia, sans-serif;
 }
 
+.footnotes {
+	margin: 8em 0 0 0;
+	padding: 1.5em 0 0 0;
+	border-top: 1px solid black;
+	font-size: 0.75em;
+}
 
 div.blurb {
 	font-style: italic;
@@ -724,6 +730,9 @@ h4{
 }
 h5{
 	font-size: 1em;
+	margin: 0;
+	font-weight:bold;
+	padding: 0 0 0.85em 0;
 }
 /* @end */
 
