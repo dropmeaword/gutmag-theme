@@ -36,8 +36,6 @@
 
 	<?php get_sidebar(); ?><!-- lf: i just removed all the sidebar stuff from here and placed it in sidebar.php -->
 
-	<!-- end post-->
-
 </div><!-- #container -->	
 
 

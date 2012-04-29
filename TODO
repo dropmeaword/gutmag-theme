@@ -1,6 +1,9 @@
+29.04.2012
+[ ] Calendar selector has a bug, when the request para is used the js cookie doesn't work.
+
 26.04.2012
-[ ] Theme the 404 page
-[ ] Theme the search page
+[x] Theme the 404 page
+[x] Theme the search page
 
 20.04.2012
 [x] Print author info in article page

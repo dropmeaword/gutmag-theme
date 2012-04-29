@@ -11,23 +11,18 @@
 <!-- begin page -->    
 
 
-<div id="content"> 
+<div class="container">  
+	<div id="content">
 	<div class="<?php wp_title('',true,''); ?> 404">
 
-		<h2><?php wp_title('',true,''); ?></h2>
+		<h2 class="sidebarHeader">Uh, oh! Seems like what you are looking for isn't here</h2>
+		<br/><br/>
+		<p>You can click back and try again or use the search form under the logo to find what you're looking for.</p>
 
-<p>You can click back and try again OR search for what you're looking for:</p>
-
-<form method="get" id="searchform" action="<?php echo home_url(); ?>/">
-  <div class="search">
-    <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" />
-    <input type="submit" id="searchsubmit" value="Search" />
-  </div><!-- .search -->
-</form>
-
-	</div> 	<!-- .dynamic-title-->	    
-</div><!-- #content-->   
-
+		</div> 	<!-- .dynamic-title-->	    
+	</div><!-- #content-->   
+	<?php get_sidebar(); ?><!-- lf: i just removed all the sidebar stuff from here and placed it in sidebar.php -->
+</div><!-- #container -->
 
 <!-- end page -->     
 
