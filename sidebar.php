@@ -4,9 +4,12 @@
 	<!-- lf begin: this is the agenda section  -->
 	<!-- lf: begin: list agenda event -->
 	<?
-	$region = $_COOKIE['whichcalendar'];
+	//$region = get_calendar_region_param();
+	$region = get_calendar_region_param();
 	if(isset($region)):
-		$filter = $region;
+		//$filter = $region;
+		$filter = get_calendar_from_region( $region );
+		$cityName = get_city_name_from_region( $region );
 		include('templates/calendar-listing.php');
 	else:
 		include('templates/calendar-not-set.php');

@@ -9,8 +9,24 @@ function get_calendar_date_scrubbed( $datestr ) {
 }
 
 /** get calendar selector from cookie */
-function get_calendar_from_cookie() {
-	if( $_COOKIE['whichcalendar'] === 'uk') {
+function get_calendar_region_param() {
+	$retval = 'nl';
+	
+	// if there's a get param, give that one preference
+	if( isset($_GET['whichcalendar']) ) {
+		$retval = $_GET['whichcalendar'];
+		$expire = time()+60*60*24*30;
+		setcookie('whichcalendar', $retval, $expire, '/');
+	} else if ( isset($_COOKIE['whichcalendar'] ) ) {
+		$retval = $_COOKIE['whichcalendar'];
+	}
+	
+	return $retval;
+}
+
+/** get calendar selector from cookie */
+function get_calendar_from_region( $region ) {
+	if( $region === 'uk') {
 		return 'UK Agenda';
 	} else {
 		return 'NL Agenda';
@@ -18,8 +34,8 @@ function get_calendar_from_cookie() {
 }
 
 /** get city name from cookie */
-function get_city_name_from_cookie() {
-	if( $_COOKIE['whichcalendar'] === 'uk') {
+function get_city_name_from_region( $region ) {
+	if( $region === 'uk') {
 		return 'London';
 	} else {
 		return 'Amsterdam';

@@ -1,3 +1,8 @@
+<?
+$region = get_calendar_region_param();
+$filter = get_calendar_from_region( $region );
+$cityName = get_city_name_from_region( $region );
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html <?php language_attributes(); ?> xmlns="http://www.w3.org/1999/xhtml">   
 <head profile="http://gmpg.org/xfn/11">  
@@ -48,7 +53,7 @@
 						break;
 					case 'calendar':
 					?>
-							<div class="here"><?= get_city_name_from_cookie(); ?> CALENDAR</div> 
+							<div class="here"><?= $cityName ?> CALENDAR</div> 
 							<a href="<?php echo get_option('home'); ?>">&uarr; back</a>
 					<?
 						break;

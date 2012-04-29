@@ -4,9 +4,10 @@ Template Name: Full Calendar Page
 */
 ?>
 <?php
-$region = $_COOKIE['whichcalendar'];
-$filter = get_calendar_from_cookie( $region );
-$cityName = get_city_name_from_cookie( $region );
+
+$region = get_calendar_region_param();
+$filter = get_calendar_from_region( $region );
+$cityName = get_city_name_from_region( $region );
 
 function get_calendar_string($begins, $ends) {
 	$retval = "";

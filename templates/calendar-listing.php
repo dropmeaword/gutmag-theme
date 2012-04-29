@@ -1,7 +1,7 @@
 <?php
 global $wpdb;
 
-switch( $filter ):
+switch( $region ):
 	case 'uk':
 		$q =  get_query_current_calendar_UK();
 		break;
