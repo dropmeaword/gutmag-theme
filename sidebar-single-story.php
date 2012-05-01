@@ -16,8 +16,6 @@
 	</div>
 
 	<div class="relatedcontent">
-		<div class="line">&nbsp;</div>
-		<span class='commentSidebar'>more from this author:</span>
 		<?php
 			$authorId = get_the_author_meta('ID');
 			//print_r($authorId);

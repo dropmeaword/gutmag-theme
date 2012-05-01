@@ -1,6 +1,20 @@
 <!-- lf begin: this is out sidebar, defined in sidebar.php -->
 <div id="sidebar">
 	
+	<? include('templates/social-home-buttons.php'); ?>
+	<!-- mh: menu widget 'right pane menu' in bottom of sidebar-->
+	<ul class="rightPaneMenu">
+	<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('Right pane menu')) ; ?> 
+	</ul>
+
+	<div class="issues">
+		<div class="issuesSidebar">
+			<h1 class="sidebarHeader">Issues</h1>
+				<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('Issues')) ; ?>
+				<? /*include('templates/sidebar-issues.php');*/ ?>
+		</div>
+	</div>
+
 	<!-- lf begin: this is the agenda section  -->
 	<!-- lf: begin: list agenda event -->
 	<?
@@ -17,20 +31,6 @@
   ?>
 	
 	<!-- <div class="line">&nbsp;</div> -->
-
-	<? include('templates/social-home-buttons.php'); ?>
-	<!-- mh: menu widget 'right pane menu' in bottom of sidebar-->
-	<ul class="rightPaneMenu">
-	<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('Right pane menu')) ; ?> 
-	</ul>
-
-	<div class="issues">
-		<div class="issuesSidebar">
-			<h1 class="sidebarHeader">Issues</h1>
-				<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('Issues')) ; ?>
-				<? /*include('templates/sidebar-issues.php');*/ ?>
-		</div>
-	</div>
 
 	<!--
 	<div class="adFreeBlock">

@@ -44,7 +44,7 @@ $g_show_backlink = 'calendar';
 get_header(); 
 ?>
 <!-- <?= $cityName ?> -->
-<div class="container calendar">
+<div class="container calendar clearfix" style="padding-bottom: 5em;">
 
 		<?php /* public_submission_form(true); */ ?>
 

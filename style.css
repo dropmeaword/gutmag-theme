@@ -33,7 +33,7 @@ pre.poem {
 	margin: 8em 0 0 0;
 	padding: 1.5em 0 0 0;
 	border-top: 1px solid black;
-	font-size: 0.75em;
+	font-size: 0.85em;
 }
 
 div.blurb {
@@ -262,8 +262,7 @@ only screen and (min-device-width: 768px) and (max-device-width: 1024px)
 /* @end */
 
 .agendaArea {
-	margin-top: -1.9em;
-	margin-bottom: -1.1em;
+	margin-top: 2.5em 0 0 0;
 }
 
 .sidebarHeader {
@@ -509,7 +508,7 @@ color: black;
 /* @group sidebar */
 
 .issues {
-	margin: 2.5em 0 0 0;
+	margin: 2.2em 0 0 0;
 }
 
 .footerSidebar {
@@ -690,7 +689,7 @@ div.itemsocial ul li{
 }
 
 div.itemsocial {
-	padding: 2em 0 0 0;
+	padding: 1em 0 0 0;
 	margin: 0 0 2.2em 0;
 }
 

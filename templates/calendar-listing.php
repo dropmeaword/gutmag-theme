@@ -17,10 +17,11 @@ $calendarPosts = $wpdb->get_results($q, OBJECT);
 ?>
 
 <section class="agendaArea">
-    <h1 class="sidebarHeader"><a href="/calendar">Event listings</a></h1>
+    <h1 class="sidebarHeader">Event listings</h1>
 		<div id="citySelector">
 			<ul class="tabSelector"><li id="nl" class="calendarSwitch">AMSTERDAM</li><li>X</li><li id="uk" class="calendarSwitch">LONDON</li></ul>
 		</div>
+		<span class="authorName"><a href="/calendar">see full listings</a></span>
 		
     <div class="containsEvents" style="margin: 1em 0 1.85em 0;">
 		<!-- <div class="sidebarLine">&nbsp;</div> -->
