@@ -192,12 +192,21 @@ add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 575, 431, true );
 add_image_size( 'full-gallery-size', 960, 720, false );
 add_image_size( 'calendar-thumbnail', 270, 170, true );
+add_image_size( 'gutmag-standard', 575, 431, true);
 
 /* @lfernandez begin adding image size for gallery */
 add_image_size( 'img-caroussel', 880, 660, false );
 /* @lfernandez end adding image size for gallery */
 
-
+/* @lfernandez make thumbnail size appear on media gallery */
+add_filter( 'image_size_names_choose', 'custom_image_sizes_choose' );
+function custom_image_sizes_choose( $sizes ) {
+	$custom_sizes = array(
+		'gutmag-standard' => 'Standard GUTmag size'
+	);
+	return array_merge( $sizes, $custom_sizes );
+}
+/* @lfernandez */
 
 
 /////////////////////
